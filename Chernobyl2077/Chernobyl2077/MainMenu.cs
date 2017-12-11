@@ -81,7 +81,7 @@ namespace Chernobyl2077
             string choise1 = Console.ReadLine();
             if (choise1 == "1")
             {
-
+                GameplayNAS.GPNAS();
             }
             if (choise1 == "2")
             {
@@ -129,6 +129,7 @@ namespace Chernobyl2077
                 //{
                 //    GameplayNAS.GPNAS();
                 //}
+                GameplayNAS.GPNAS();
             }
             if (choise1 == "2")
             {
