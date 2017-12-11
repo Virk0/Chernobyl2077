@@ -10,6 +10,7 @@ namespace Chernobyl2077
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
