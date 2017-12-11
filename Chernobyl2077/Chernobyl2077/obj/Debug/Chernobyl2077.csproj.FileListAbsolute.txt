@@ -1,0 +1,6 @@
+C:\Users\opilane\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\obj\Debug\Chernobyl2077.csprojResolveAssemblyReference.cache
+C:\Users\opilane\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\bin\Debug\Chernobyl2077.exe.config
+C:\Users\opilane\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\bin\Debug\Chernobyl2077.exe
+C:\Users\opilane\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\bin\Debug\Chernobyl2077.pdb
+C:\Users\opilane\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\obj\Debug\Chernobyl2077.exe
+C:\Users\opilane\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\obj\Debug\Chernobyl2077.pdb

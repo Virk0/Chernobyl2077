@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Diagnostics;
+using System.Threading;
 
 
 namespace Chernobyl2077
 {
     class MainMenu
     {
-        static void Main(string[] args)
+        public static void Memu()
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
