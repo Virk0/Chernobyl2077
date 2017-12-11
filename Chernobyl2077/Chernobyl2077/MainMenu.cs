@@ -101,6 +101,7 @@ namespace Chernobyl2077
         }
         public static void MaMeLoaded()
         {
+            MainMenuLoaded:
             using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
             {
                 using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
@@ -140,7 +141,10 @@ namespace Chernobyl2077
             {
                 Environment.Exit(0);
             }
-
+            else
+            {
+                goto MainMenuLoaded;
+            }
         }
     }
 }
