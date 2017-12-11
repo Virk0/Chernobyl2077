@@ -21,16 +21,16 @@ namespace Chernobyl2077
                 mainArt:
                 if (watch.Elapsed.TotalMilliseconds >= 6000)
                     break;
-                using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt"))
+                using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
                 {
-                    using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt"))
+                    using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
                     {
                         string Icon = Main_Icon.ReadToEnd();
                         Console.WriteLine(Icon);
                         string MLogo = Main_Logo.ReadToEnd();
                         Console.WriteLine(MLogo);
                         System.Threading.Thread.Sleep(2900);
-                        using (StreamReader Main_LogoB = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogoBad.txt"))
+                        using (StreamReader Main_LogoB = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogoBad.txt")) //Vaheta User opilaseks [opilane]
                         {
                             Console.Clear();
                             Console.WriteLine(Icon);
@@ -46,10 +46,10 @@ namespace Chernobyl2077
                 Console.WriteLine("This is test no. " + i + "\n");
             }
             watch.Stop();
-            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt"))
+            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane] 
             {
-                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt"))
-                {
+                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                { 
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
                     string MLogo = Main_Logo.ReadToEnd();
@@ -59,12 +59,12 @@ namespace Chernobyl2077
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("                                                                                                 Type anything to continue");
-            Console.ReadLine();
+            Console.WriteLine("                                                                                                 Press any key to continue");
+            Console.ReadKey();
             Console.Clear();
-            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt"))
+            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
             {
-                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt"))
+                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
                 {
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -84,7 +84,7 @@ namespace Chernobyl2077
             }
             if (choise1 == "2")
             {
-                using (StreamReader Dev = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Development.txt"))
+                using (StreamReader Dev = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Development.txt")) //Vaheta User opilaseks [opilane]
                 {
                     Console.Clear();
                     string Dev_ = Dev.ReadToEnd();
