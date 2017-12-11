@@ -54,7 +54,7 @@ namespace Chernobyl2077
                 Console.ReadKey();
                 Console.WriteLine("???: You must be a mad lad. Many people have tried to destroy it before, but they have either failed and lived to tell the tale or die");
                 Console.ReadKey();
-                Console.WriteLine("Mr.B: I had no option, i was sent by the Totally not FBI™");
+                Console.WriteLine("Mr.B: I had no option, i was sent by the Totally not FBI@TM");
                 Console.ReadKey();
                 Console.WriteLine("Ol Jhonny Boy: So you are their latest agent, i was sent here aswell in 2069, but i was trapped here with no food or water");
                 Console.ReadKey();
@@ -147,13 +147,15 @@ namespace Chernobyl2077
                     if (choiseBanana == "2")
                     {
                         Console.WriteLine("Good job, you didn't eat a radiated banana");
+                        Console.WriteLine("But you still see those russians");
+                        Console.WriteLine("Actually 3 of them");
                     }
                         
                 }
                 if (choiseRoad == "4")
                 {
                     Console.WriteLine("You decided do go to smert'");
-                    Console.WriteLine("cмерть could mean death in russian");
+                    Console.WriteLine("smert' could mean death in russian");
                     System.Threading.Thread.Sleep(3000);
                     Console.WriteLine("you arrive");
                     Console.WriteLine("you are dying from radiation poisoning");
