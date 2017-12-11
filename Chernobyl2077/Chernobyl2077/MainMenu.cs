@@ -12,7 +12,7 @@ namespace Chernobyl2077
 {
     class MainMenu
     {
-        public static void Memu()
+        public static void MaMe()
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
