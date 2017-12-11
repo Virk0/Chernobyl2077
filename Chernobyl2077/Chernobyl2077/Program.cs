@@ -71,7 +71,7 @@ namespace Chernobyl2077
                     Console.WriteLine(MLogo);
                 }
             }
-            Console.WriteLine("1. Start Game \n2.Options \n3.Exit Game");
+            Console.WriteLine("1.Start Game \n2.Options \n3.Exit Game");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
