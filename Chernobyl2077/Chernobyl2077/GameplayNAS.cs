@@ -124,8 +124,8 @@ namespace Chernobyl2077
                             Console.WriteLine("You ate a radiated banana");
                             Console.WriteLine("You smart");
                             System.Threading.Thread.Sleep(2000);
-                            using (StreamReader DS = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt"))
-                            {
+                            using (StreamReader DS = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
+                        {
                                 String DS_ = DS.ReadToEnd();
                                 Console.WriteLine(DS_);
                                 Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
@@ -159,8 +159,8 @@ namespace Chernobyl2077
                         System.Threading.Thread.Sleep(3000);
                         Console.WriteLine("you arrive");
                         Console.WriteLine("you are dying from radiation poisoning");
-                        using (StreamReader DeathScreen2 = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt"))
-                        {
+                        using (StreamReader DeathScreen2 = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
+                    {
                             string DS2 = DeathScreen2.ReadToEnd();
                             Console.WriteLine(DS2);
                             Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
