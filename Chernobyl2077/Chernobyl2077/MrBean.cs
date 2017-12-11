@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    class MrBean
+    public class MrBean : Entity
     {
+        public void Dabberino()
+        {
+            Console.WriteLine("Mr Bean dabs!");
+            Console.WriteLine("The hater dies!");
+        }
+        public void Attackk()
+        {
+            Console.WriteLine("Mr Bean" + Attack());
+        }
     }
 }
