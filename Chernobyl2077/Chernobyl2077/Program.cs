@@ -16,7 +16,7 @@ namespace Chernobyl2077
             Console.WriteLine("Press enter to proceed");
             Console.ReadKey();
             Console.Clear();
-            Console.WriteLine("Mr bean has finally arrived in chernobyl");
+            Console.WriteLine("Mr beany has finally arrived in chernobyl");
             Console.ReadKey();
             Console.WriteLine("Mr.B: It's even worse than i thought");
             Console.ReadKey();
@@ -26,7 +26,7 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("???: Chto ty zdes' delayesh'?");
             Console.ReadKey();
-            Console.WriteLine("Mr Bean doesn't understand a single word this guy said");
+            Console.WriteLine("Mr Beany doesn't understand a single word this guy said");
             Console.ReadKey();
             Console.WriteLine("Mr.B: Wat?");
             Console.ReadKey();
@@ -34,7 +34,7 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("Mr Bean still didn't undestand anything this being said");
             Console.ReadKey();
-            Console.WriteLine("Bean tries to move past him");
+            Console.WriteLine("Beany tries to move past him");
             Console.ReadKey();
             Console.WriteLine("???: Gde vy dumayete, chto sobirayetes'");
             Console.ReadKey();
@@ -124,13 +124,24 @@ namespace Chernobyl2077
                         Console.WriteLine("You ate a radiated banana");
                         Console.WriteLine("You smart");
                         System.Threading.Thread.Sleep(2000);
-                        using (StreamReader DeathScreen = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt"))
+                        using (StreamReader DS = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt"))
                         {
-                            string DS = DeathScreen.ReadToEnd();
-                            Console.WriteLine(DeathScreen);
-                            System.Threading.Thread.Sleep(2000);
-                            Console.Clear();
-                            goto Banana;
+                            String DS_ = DS.ReadToEnd();
+                            Console.WriteLine(DS_);
+                            Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
+                            string choiseBaDead = Console.ReadLine();
+                            if (choiseBaDead == "1")
+                            {
+                                Console.WriteLine("Returning to your choise");
+                                System.Threading.Thread.Sleep(1000);
+                                goto Banana;
+                            }
+                            if (choiseBaDead == "2")
+                            {
+                                Console.WriteLine("Okay");
+                                System.Threading.Thread.Sleep(1000);
+                                goto Roads;
+                            }
                         }
                     }
                     if (choiseBanana == "2")
@@ -146,10 +157,10 @@ namespace Chernobyl2077
                     System.Threading.Thread.Sleep(3000);
                     Console.WriteLine("you arrive");
                     Console.WriteLine("you are dying from radiation poisoning");
-                    using (StreamReader DeathScreen = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt"))
+                    using (StreamReader DeathScreen2 = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt"))
                     {
-                        string DS = DeathScreen.ReadToEnd();
-                        Console.WriteLine(DeathScreen);
+                        string DS2 = DeathScreen2.ReadToEnd();
+                        Console.WriteLine(DS2);
                         Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
                         string choiseBaDead = Console.ReadLine();
                         if (choiseBaDead == "1")
@@ -165,6 +176,10 @@ namespace Chernobyl2077
                             Environment.Exit(0);
                         }
                     }
+                }
+                else
+                {
+                    goto Roads;
                 }
 
             }
