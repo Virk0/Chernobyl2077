@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    class Gameplay
+    class GameplayAS
     {
+        public static void GPAS()
+        {
+
+        }
     }
 }

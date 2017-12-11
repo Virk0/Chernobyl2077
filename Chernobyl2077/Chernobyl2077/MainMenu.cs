@@ -46,6 +46,7 @@ namespace Chernobyl2077
                 Console.WriteLine("This is test no. " + i + "\n");
             }
             watch.Stop();
+            MainMenuLoaded:
             using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane] 
             {
                 using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
@@ -76,7 +77,7 @@ namespace Chernobyl2077
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("Enter your option:");
+            Console.WriteLine("Enter your choice:");
             string choise1 = Console.ReadLine();
             if (choise1 == "1")
             {
@@ -86,10 +87,53 @@ namespace Chernobyl2077
             {
                 using (StreamReader Dev = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Development.txt")) //Vaheta User opilaseks [opilane]
                 {
-                    Console.Clear();
-                    string Dev_ = Dev.ReadToEnd();
-                    Console.WriteLine(Dev_);
-                    Console.ReadLine();
+                    Options.Op();
+                }
+            }
+            if (choise1 == "3")
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                goto MainMenuLoaded;
+            }
+        }
+        public static void MaMeLoaded()
+        {
+            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+            {
+                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                {
+                    string Icon = Main_Icon.ReadToEnd();
+                    Console.WriteLine(Icon);
+                    string MLogo = Main_Logo.ReadToEnd();
+                    Console.WriteLine(MLogo);
+                }
+            }
+            Console.WriteLine("1.Start Game \n2.Options \n3.Exit Game");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Enter your choice:");
+            string choise1 = Console.ReadLine();
+            if (choise1 == "1")
+            {
+                //if (Options.Op.OptionsCh == "1")
+                //{
+                //    GameplayAS.GPAS();
+
+                //}
+                //if (Options.Op.OptionsCh == "2")
+                //{
+                //    GameplayNAS.GPNAS();
+                //}
+            }
+            if (choise1 == "2")
+            {
+                using (StreamReader Dev = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Development.txt")) //Vaheta User opilaseks [opilane]
+                {
+                    Options.Op();
                 }
             }
             if (choise1 == "3")
