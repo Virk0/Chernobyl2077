@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    class Program
+    class Combat
     {
         static void Main(string[] args)
         {
-            Combat_start:
+            
+            Entity aaa = new Entity();
             Goblin Goblin = new Goblin();
             MrBean MrBean = new MrBean();
+            Combat_start:
             Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
             string choice1 = (Console.ReadLine());
             if (choice1 == "1")
@@ -21,17 +23,26 @@ namespace Chernobyl2077
                 string choice2= (Console.ReadLine());
                 if (choice2=="1")
                 {
-                    MrBean.Attackk();
+                    MrBean.Attackk(); 
                     Goblin.TakeDamageGoblin();
-                    if (GoblinHP == 0)
+                    Goblin.GoblinHP = Goblin.GoblinHP - 10;
+                    if (Goblin.GoblinHP == 0)
                     {
                         Console.WriteLine("The goblin died!");
+                    }
+                    else
+                    {
+                        Goblin.GoblinAttack();
+                        Console.WriteLine("Mr Bean takes 10 damage!");
+                        MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                        goto Combat_start;
                     }
                     Console.ReadKey();
                 }
                 else if (choice2=="2")
                 {
                    MrBean.Dabberino();
+                    goto End_Combat;
                 }
                 else
                 {
@@ -42,8 +53,10 @@ namespace Chernobyl2077
             }
             else if(choice1=="2")
             {
+                Goblin.GoblinAttack();
                 Console.WriteLine("Mr Bean dodges!");
-                Console.ReadLine();
+                Console.WriteLine("Goblins attack misses!");
+                goto Combat_start;
             }
             else
             {
@@ -51,7 +64,9 @@ namespace Chernobyl2077
                 System.Threading.Thread.Sleep(2000);
                 goto Combat_start;
             }
-
+            End_Combat:
+            Console.WriteLine("you win");
+            Console.ReadLine();
         }
     }
 }
