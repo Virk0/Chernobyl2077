@@ -139,6 +139,16 @@ namespace Chernobyl2077
                     System.Threading.Thread.Sleep(500);
                     Console.WriteLine("Poor Chernobyl Gopniks");
                     Console.ReadKey();
+                    Console.WriteLine("You keep inspecting his body and you find a note");
+                    Console.ReadKey();
+                    using (StreamReader Note_1 = new StreamReader(path + @"\Note_1.txt"))
+                    {
+                        string Note1 = Note_1.ReadToEnd();
+                        Console.WriteLine(Note1);
+                    }
+                    Console.ReadKey();
+                    Console.WriteLine("You dont understand the letter");
+                    Console.ReadKey();
                     Console.WriteLine("You start walking down the road");
                     Console.ReadKey();
                     Roads:
@@ -357,6 +367,200 @@ namespace Chernobyl2077
                             Console.WriteLine("Who was he talking about");
                             Console.ReadKey();
                             Console.WriteLine("I dont have time for figuring this out, i have to keep moving");
+                            Console.ReadKey();
+                        Magazin:
+                            Console.WriteLine("*You head to a bulding that has 'magazin' written on it");
+                            Console.ReadKey();
+                            Console.WriteLine("*You head inside");
+                            Console.ReadKey();
+                        Disturbing:
+                            Console.WriteLine("****What you see in there is very disturbing****");
+                        DisturbingCH:
+                            Console.WriteLine("Do you wish to see what Mr.B saw?\n1.Yes\n2.No");
+                            string ChMagazin = Console.ReadLine();
+                            if (ChMagazin == "1")
+                            {
+                                using (StreamReader HangMan = new StreamReader(path + @"\HangingMan.txt"))
+                                {
+                                    string HangedMan = HangMan.ReadToEnd();
+                                    Console.WriteLine(HangedMan);
+                                    Console.ReadKey();
+                                    goto DabbingCauses;
+                                }
+                            }
+                            if (ChMagazin == "2")
+                            {
+                                Console.WriteLine("Good choice");
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                goto DisturbingCH;
+                            }
+                        DabbingCauses:
+                            Console.WriteLine("Mr.B: This is horrific");
+                            Console.ReadKey();
+                            Console.Clear();
+                        WaterBottleCh:
+                            Console.WriteLine("*Bean heads out of the store");
+                            Console.ReadKey();
+                            using (StreamReader WaterBottle = new StreamReader(path + @"\WaterBottle.txt"))
+                            {
+                                string WB = WaterBottle.ReadToEnd();
+                                Console.WriteLine(WB);
+                            }
+                            Console.WriteLine("*He sees a waterbottle on the ground");
+                            Console.ReadKey();
+                            Console.WriteLine("Mr.B: Should i drink it?\n1.Yes\n2.No");
+                            string BottleCh = Console.ReadLine();
+                            if (BottleCh == "Yes")
+                            {
+                                Random rand = new Random();
+
+                                if (rand.Next(0, 2) == 0)
+                                {
+                                    using (StreamReader DeathScreenWB = new StreamReader(path + @"\DeathScreen.txt"))
+                                    {
+                                        string DSWB = DeathScreenWB.ReadToEnd();
+                                        Console.WriteLine(DSWB);
+                                    }
+                                    Console.WriteLine("* You died to radiation poisoning");
+                                    Console.ReadKey();
+                                WBRetry:
+                                    Console.WriteLine("Retry?\n1.Yes\n2.No");
+                                    string RetryBottle = Console.ReadLine();
+                                    if (RetryBottle == "Yes")
+                                    {
+                                        Console.Clear();
+                                        goto WaterBottleCh;
+                                    }
+                                    if (RetryBottle == "No")
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    else
+                                    {
+                                        goto WaterBottleCh;
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("* The water was luckly radiation free");
+                                    Console.ReadKey();
+                                }
+                            }
+                            if (BottleCh == "No")
+                            {
+                                Console.WriteLine("Your choice");
+                                Console.ReadKey();
+                            }
+
+                            Console.WriteLine("* Bean looks around himself and sees a russian goblin");
+                            Console.ReadKey();
+                            Console.WriteLine("Russian Goblin:Ya sobirayus' tebya ubit'");
+                            Console.ReadKey();
+                            Console.WriteLine("* Bean preapers to fight");
+                            Console.ReadKey();
+                            Console.WriteLine("Mr.B:Dont try it Goblin!");
+                            Console.ReadKey();
+                            Console.WriteLine("Russian Goblin:Ty nedootsenivayesh' moyu moshch'");
+                            Console.ReadKey();
+                            Console.WriteLine("* Goblin jumps at Bean and combat begins");
+                            if (Secret_Code == "3499")
+                            {
+                                Console.WriteLine("*****************Skipping Combat*****************");
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                            Combat3:
+                                Console.WriteLine("You enter in combat with the Russian goblin");
+                                Entity aaa = new Entity();
+                                Goblin Goblin = new Goblin();
+                                MrBean MrBean = new MrBean();
+                            Combat_start:
+                                Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
+                                string choice1 = (Console.ReadLine());
+                                if (choice1 == "1")
+                                {
+                                    Console.WriteLine("\n1.Attack\n2.Dab");
+                                    string choice2 = (Console.ReadLine());
+                                    if (choice2 == "1")
+                                    {
+                                        MrBean.Attackk();
+                                        Goblin.TakeDamageGoblin();
+                                        Goblin.GoblinHP = Goblin.GoblinHP - 10;
+                                        if (Goblin.GoblinHP == 0)
+                                        {
+                                            Console.WriteLine("The goblin died!");
+                                        }
+                                        else
+                                        {
+                                            Goblin.GoblinAttack();
+                                            Console.WriteLine("Mr Bean takes 10 damage!");
+                                            MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                                            goto Combat_start;
+                                        }
+                                        Console.ReadKey();
+                                    }
+                                    else if (choice2 == "2")
+                                    {
+                                        MrBean.Dabberino();
+                                        goto End_Combat;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Mr Bean cant do that!");
+                                        System.Threading.Thread.Sleep(1250);
+                                        goto Combat_start;
+                                    }
+                                }
+                                else if (choice1 == "2")
+                                {
+                                    Goblin.GoblinAttack();
+                                    Console.WriteLine("Mr Bean dodges!");
+                                    Console.WriteLine("Goblins attack misses!");
+                                    goto Combat_start;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Mr Bean cant do that!(Type 1 to Attack & 2 to Dodge)");
+                                    System.Threading.Thread.Sleep(2000);
+                                    goto Combat_start;
+                                }
+                            End_Combat:
+                                Console.WriteLine("you win");
+                                Console.ReadLine();
+
+                            }
+                            Console.WriteLine("You knock the Goblin out. What he didn't realise is, that you had the high ground");
+                            Console.ReadKey();
+                            Console.WriteLine("Bean is getting tired, but he can't fall asleep");
+                            Console.ReadKey();
+                            Console.WriteLine("Suddenly bean hears multiple goblins behind him");
+                            Console.WriteLine("Bean gets knocked out");
+                            Console.ReadKey();
+                            Console.WriteLine("");
+                            Console.ReadKey();
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.ReadKey();
+                            Console.Clear();
+                            Console.WriteLine("*Bean wakes up");
+                            Console.ReadKey();
+                            Console.WriteLine("*Mr.B: What just happened?");
+                            Console.ReadKey();
+                            Console.WriteLine("???: SILENCE!");
+                            Console.ReadKey();
+                            Console.WriteLine("*Bean looks up and he sees a dabbing russian goblin, who can speak english");
+                            Console.ReadKey();
+                            Console.WriteLine("*Mr.B: Where am i?!?");
+                            Console.ReadKey();
+                            Console.WriteLine("???: You're in the house of The Chosen One, The One who is best at dabbing, Jake Paul");
+                            Console.ReadKey();
+                            Console.WriteLine("*Now we know what was that note about");
+                            Console.ReadKey();
+
 
 
                         }
@@ -368,12 +572,12 @@ namespace Chernobyl2077
                     }
                     if (choiseRoad == "2")
                     {
-                        Console.WriteLine("You decide do go to net avtomobiley");
+                        Console.WriteLine("*You decide do go to net avtomobiley");
                         Console.ReadKey();
-                        Console.WriteLine("You arrive");
-                        Console.WriteLine("You don't see any cars nearby");
+                        Console.WriteLine("*You arrive");
+                        Console.WriteLine("*You don't see any cars nearby");
                         Console.ReadKey();
-                        Console.WriteLine("But what you do see is another russian goblin, oh great");
+                        Console.WriteLine("*But what you do see is another russian goblin, oh great");
                         if (Secret_Code == "3499")
                         {
                             Console.WriteLine("*****************Skipping Combat*****************");
@@ -381,7 +585,7 @@ namespace Chernobyl2077
                         }
                         else
                         {
-                            Console.WriteLine("You enter in combat with the russian goblin");
+                            Console.WriteLine("*You enter in combat with the russian goblin");
                             Entity aaa = new Entity();
                             Goblin Goblin = new Goblin();
                             MrBean MrBean = new MrBean();
@@ -440,23 +644,23 @@ namespace Chernobyl2077
                             Console.ReadLine();
 
                         }
-                        Console.WriteLine("The goblin falls down after the hard fight");
+                        Console.WriteLine("*The goblin falls down after the hard fight");
                         Console.ReadKey();
-                        Console.WriteLine("You see a roadsign nearby with 'Banan' written on it");
+                        Console.WriteLine("*You see a roadsign nearby with 'Banan' written on it");
                         Console.ReadKey();
-                        Console.WriteLine("You decide do go to banan");
+                        Console.WriteLine("*You decide do go to banan");
                         Console.ReadKey();
-                        Console.WriteLine("You arrive");
+                        Console.WriteLine("*You arrive");
                         Banana:
-                        Console.WriteLine("You see a banana on the ground");
+                        Console.WriteLine("*You see a banana on the ground");
                         Console.ReadKey();
                         Console.WriteLine("Mr.B: Hm, should i eat it?");
                         Console.WriteLine("1.Yes\n2.No");
                         string choiseBanana = Console.ReadLine();
                         if (choiseBanana == "1")
                         {
-                            Console.WriteLine("You ate a radiated banana");
-                            Console.WriteLine("You smart");
+                            Console.WriteLine("*You ate a radiated banana");
+                            Console.WriteLine("*You smart");
                             Console.ReadKey();
                             using (StreamReader DS = new StreamReader(path + @"\DeathScreen.txt"))
                             {
@@ -481,11 +685,11 @@ namespace Chernobyl2077
                         if (choiseBanana == "2")
                         {
 
-                            Console.WriteLine("Good job, you didn't eat a radiated banana");
+                            Console.WriteLine("*Good job, you didn't eat a radiated banana");
                             Console.ReadKey();
-                            Console.WriteLine("But you still find a russian");
+                            Console.WriteLine("*But you still find a russian");
                             Console.ReadKey();
-                            Console.WriteLine("And he start running towards you");
+                            Console.WriteLine("*And he start running towards you");
                             Console.ReadKey();
                             if (Secret_Code == "3499")
                             {
@@ -554,25 +758,25 @@ namespace Chernobyl2077
                                 Console.ReadLine();
 
                             }
-                            Console.WriteLine("You beat the goblin");
+                            Console.WriteLine("*You beat the goblin");
                             Console.ReadKey();
-                            Console.WriteLine("He managed to say something before passing out");
+                            Console.WriteLine("*He managed to say something before passing out");
                             Console.ReadKey();
                             Console.WriteLine("Russian Goblin:'H-he is too stro-ong for y-you'");
                             Console.ReadKey();
-                            Console.WriteLine("He passed out");
+                            Console.WriteLine("*He passed out");
                             Console.ReadKey();
-                            Console.WriteLine("Who was he talking about");
+                            Console.WriteLine("*Who was he talking about");
                             Console.ReadKey();
-                            Console.WriteLine("I dont have time for figuring this out, i have to keep moving");
+                            Console.WriteLine("Mr.B:I dont have time for figuring this out, i have to keep moving");
                             Console.ReadKey();
                             Magazin:
-                            Console.WriteLine("You head to a bulding that has 'magazin' written on it");
+                            Console.WriteLine("*You head to a bulding that has 'magazin' written on it");
                             Console.ReadKey();
-                            Console.WriteLine("You head inside");
+                            Console.WriteLine("*You head inside");
                             Console.ReadKey();
                             Disturbing:
-                            Console.WriteLine("What you see in there is very disturbing");
+                            Console.WriteLine("****What you see in there is very disturbing****");
                             DisturbingCH:
                             Console.WriteLine("Do you wish to see what Mr.B saw?\n1.Yes\n2.No");
                             string ChMagazin = Console.ReadLine();
@@ -596,62 +800,74 @@ namespace Chernobyl2077
                                 goto DisturbingCH;
                             }
                             DabbingCauses:
-                            Console.WriteLine("Mr.B: This is what dabbing causes");
+                            Console.WriteLine("Mr.B: This is horrific");
                             Console.ReadKey();
                             Console.Clear();
                             WaterBottleCh:
-                            Console.WriteLine("Bean heads out of the store");
+                            Console.WriteLine("*Bean heads out of the store");
                             Console.ReadKey();
                             using (StreamReader WaterBottle = new StreamReader(path + @"\WaterBottle.txt"))
                             {
                                 string WB = WaterBottle.ReadToEnd();
                                 Console.WriteLine(WB);
                             }
-                            Console.WriteLine("He sees a waterbottle on the ground");
+                            Console.WriteLine("*He sees a waterbottle on the ground");
                             Console.ReadKey();
-                            Console.WriteLine("Should i drink it?\n1.Yes\n2.No");
+                            Console.WriteLine("Mr.B: Should i drink it?\n1.Yes\n2.No");
                             string BottleCh = Console.ReadLine();
-                            Random rand = new Random();
-
-                            if (rand.Next(0, 2) == 0)
+                            if (BottleCh == "Yes")
                             {
-                                using (StreamReader DeathScreenWB = new StreamReader(path + @"\DeathScreen.txt"))
+                                Random rand = new Random();
+
+                                if (rand.Next(0, 2) == 0)
                                 {
-                                    string DSWB = DeathScreenWB.ReadToEnd();
-                                    Console.WriteLine(DSWB);
-                                }
-                                Console.WriteLine("You died to radiation poisoning");
-                                Console.ReadKey();
+                                    using (StreamReader DeathScreenWB = new StreamReader(path + @"\DeathScreen.txt"))
+                                    {
+                                        string DSWB = DeathScreenWB.ReadToEnd();
+                                        Console.WriteLine(DSWB);
+                                    }
+                                    Console.WriteLine("* You died to radiation poisoning");
+                                    Console.ReadKey();
                                 WBRetry:
-                                Console.WriteLine("Retry?\n1.Yes\n2.No");
-                                string RetryBottle = Console.ReadLine();
-                                if (RetryBottle == "Yes")
-                                {
-                                    Console.Clear();
-                                    goto WaterBottleCh;
-                                }
-                                if (RetryBottle == "No")
-                                {
-                                    Environment.Exit(0);
+                                    Console.WriteLine("Retry?\n1.Yes\n2.No");
+                                    string RetryBottle = Console.ReadLine();
+                                    if (RetryBottle == "Yes")
+                                    {
+                                        Console.Clear();
+                                        goto WaterBottleCh;
+                                    }
+                                    if (RetryBottle == "No")
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    else
+                                    {
+                                        goto WaterBottleCh;
+                                    }
                                 }
                                 else
                                 {
-                                    goto WBRetry;
+                                    Console.WriteLine("* The water was luckly radiation free");
+                                    Console.ReadKey();
                                 }
                             }
-                            else
+                            if (BottleCh == "No")
                             {
-                                Console.WriteLine("The water was luckly radiation free");
+                                Console.WriteLine("Your choice");
                                 Console.ReadKey();
                             }
 
-                            Console.WriteLine("Bean looks around himself and sees a russian goblin");
+                            Console.WriteLine("* Bean looks around himself and sees a russian goblin");
                             Console.ReadKey();
                             Console.WriteLine("Russian Goblin:Ya sobirayus' tebya ubit'");
                             Console.ReadKey();
-                            Console.WriteLine("Bean preapers to fight");
+                            Console.WriteLine("* Bean preapers to fight");
                             Console.ReadKey();
-                            Console.WriteLine("Goblin jumps at Bean and combat begins");
+                            Console.WriteLine("Mr.B:Dont try it Goblin!");
+                            Console.ReadKey();
+                            Console.WriteLine("Russian Goblin:Ty nedootsenivayesh' moyu moshch'");
+                            Console.ReadKey();
+                            Console.WriteLine("* Goblin jumps at Bean and combat begins");
                             if (Secret_Code == "3499")
                             {
                                 Console.WriteLine("*****************Skipping Combat*****************");
@@ -719,6 +935,8 @@ namespace Chernobyl2077
                                 Console.ReadLine();
 
                             }
+                            Console.WriteLine("You knock the Goblin out. What he didn't realise is, that you had the high ground");
+                            Console.ReadKey();
                             Console.WriteLine("Bean is getting tired, but he can't fall asleep");
                             Console.ReadKey();
                             Console.WriteLine("Suddenly bean hears multiple goblins behind him");
@@ -730,19 +948,19 @@ namespace Chernobyl2077
                             Console.WriteLine("");
                             Console.ReadKey();
                             Console.Clear();
-                            Console.WriteLine("Bean wakes up");
+                            Console.WriteLine("*Bean wakes up");
                             Console.ReadKey();
-                            Console.WriteLine("Mr.B: What just happened?");
+                            Console.WriteLine("*Mr.B: What just happened?");
                             Console.ReadKey();
-                            Console.WriteLine("SILENCE!");
+                            Console.WriteLine("???: SILENCE!");
                             Console.ReadKey();
-                            Console.WriteLine("Bean looks up and he sees a dabbing russian goblin, who can speak english");
+                            Console.WriteLine("*Bean looks up and he sees a dabbing russian goblin, who can speak english");
                             Console.ReadKey();
-                            Console.WriteLine("Mr.B: Where am i?!?");
+                            Console.WriteLine("*Mr.B: Where am i?!?");
                             Console.ReadKey();
-                            Console.WriteLine("You're in the house of The Chosen One, The One who is best at dabbing, Jake Paul");
+                            Console.WriteLine("???: You're in the house of The Chosen One, The One who is best at dabbing, Jake Paul");
                             Console.ReadKey();
-                            Console.WriteLine("Now we know what was that note about");
+                            Console.WriteLine("*Now we know what was that note about");
                             Console.ReadKey();
 
                         }
