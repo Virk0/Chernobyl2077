@@ -16,8 +16,6 @@ namespace Chernobyl2077
             string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Art");
             Console.WriteLine("Press enter to proceed");
             string Secret_Code = Console.ReadLine();
-
-                Console.ReadKey();
                 Console.Clear();
                 Console.WriteLine("Mr beany has finally arrived in chernobyl");
                 Console.ReadKey();
@@ -133,7 +131,7 @@ namespace Chernobyl2077
                     Console.ReadKey();
                     Console.WriteLine("You head out of the house and back on the road");
                     Console.ReadKey();
-                    Console.WriteLine("You inspect the persons body, who you killed before");
+                    Console.WriteLine("You inspect the persons body, who you knocked out before");
                     Console.ReadKey();
                     Console.WriteLine("You find out that they are radiated russian gopniks");
                     System.Threading.Thread.Sleep(500);
@@ -362,6 +360,10 @@ namespace Chernobyl2077
 
 
                         }
+                        else
+                        {
+                            goto Banana;
+                        }
 
                     }
                     if (choiseRoad == "2")
@@ -571,7 +573,8 @@ namespace Chernobyl2077
                             Console.ReadKey();
                             Disturbing:
                             Console.WriteLine("What you see in there is very disturbing");
-                            Console.WriteLine("Do you wish to see what Mr.B saw?\n1.Yes\n.2No");
+                            DisturbingCH:
+                            Console.WriteLine("Do you wish to see what Mr.B saw?\n1.Yes\n2.No");
                             string ChMagazin = Console.ReadLine();
                             if (ChMagazin == "1")
                             {
@@ -580,6 +583,7 @@ namespace Chernobyl2077
                                     string HangedMan = HangMan.ReadToEnd();
                                     Console.WriteLine(HangedMan);
                                     Console.ReadKey();
+                                    goto DabbingCauses;
                                 }
                             }
                             if (ChMagazin == "2")
@@ -587,12 +591,60 @@ namespace Chernobyl2077
                                 Console.WriteLine("Good choice");
                                 Console.ReadKey();
                             }
+                            else
+                            {
+                                goto DisturbingCH;
+                            }
+                            DabbingCauses:
                             Console.WriteLine("Mr.B: This is what dabbing causes");
                             Console.ReadKey();
+                            Console.Clear();
+                            WaterBottleCh:
                             Console.WriteLine("Bean heads out of the store");
                             Console.ReadKey();
+                            using (StreamReader WaterBottle = new StreamReader(path + @"\WaterBottle.txt"))
+                            {
+                                string WB = WaterBottle.ReadToEnd();
+                                Console.WriteLine(WB);
+                            }
                             Console.WriteLine("He sees a waterbottle on the ground");
                             Console.ReadKey();
+                            Console.WriteLine("Should i drink it?\n1.Yes\n2.No");
+                            string BottleCh = Console.ReadLine();
+                            Random rand = new Random();
+
+                            if (rand.Next(0, 2) == 0)
+                            {
+                                using (StreamReader DeathScreenWB = new StreamReader(path + @"\DeathScreen.txt"))
+                                {
+                                    string DSWB = DeathScreenWB.ReadToEnd();
+                                    Console.WriteLine(DSWB);
+                                }
+                                Console.WriteLine("You died to radiation poisoning");
+                                Console.ReadKey();
+                                WBRetry:
+                                Console.WriteLine("Retry?\n1.Yes\n2.No");
+                                string RetryBottle = Console.ReadLine();
+                                if (RetryBottle == "Yes")
+                                {
+                                    Console.Clear();
+                                    goto WaterBottleCh;
+                                }
+                                if (RetryBottle == "No")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else
+                                {
+                                    goto WBRetry;
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("The water was luckly radiation free");
+                                Console.ReadKey();
+                            }
+
                             Console.WriteLine("Bean looks around himself and sees a russian goblin");
                             Console.ReadKey();
                             Console.WriteLine("Russian Goblin:Ya sobirayus' tebya ubit'");
@@ -693,6 +745,10 @@ namespace Chernobyl2077
                             Console.WriteLine("Now we know what was that note about");
                             Console.ReadKey();
 
+                        }
+                        else
+                        {
+                            goto Banana;
                         }
 
                     }
