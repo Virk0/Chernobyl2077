@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    class Entity
+    public class Entity
     {
+        public int HP, MP, AP;
+        public string Attack()
+        {
+            string xd = " attacks!";
+            return xd;
+        }
+
+        public string TakeDamage1()
+        {
+            string bxd = "takes ";
+            return bxd;
+        }
+        public string TakeDamage2()
+        {
+            string cxd = " damage!";
+            return cxd;
+        }
     }
 }

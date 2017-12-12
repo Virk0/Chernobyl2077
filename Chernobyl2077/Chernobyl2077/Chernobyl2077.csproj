@@ -42,9 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combat.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="GameplayAS.cs" />
     <Compile Include="GameplayNAS.cs" />
+    <Compile Include="Goblin.cs" />
     <Compile Include="MainMenu.cs" />
+    <Compile Include="MrBean.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
