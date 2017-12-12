@@ -16,6 +16,7 @@ namespace Chernobyl2077
             string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Art");
             Console.WriteLine("Press enter to proceed");
             string Secret_Code = Console.ReadLine();
+
                 Console.ReadKey();
                 Console.Clear();
                 Console.WriteLine("Mr beany has finally arrived in chernobyl");
@@ -289,6 +290,63 @@ namespace Chernobyl2077
                             {
                                 Combat3:
                                 Console.WriteLine("You enter in combat with the Goblin");
+                                Entity aaa = new Entity();
+                                Goblin Goblin = new Goblin();
+                                MrBean MrBean = new MrBean();
+                                Combat_start:
+                                Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
+                                string choice1 = (Console.ReadLine());
+                                if (choice1 == "1")
+                                {
+                                    Console.WriteLine("\n1.Attack\n2.Dab");
+                                    string choice2 = (Console.ReadLine());
+                                    if (choice2 == "1")
+                                    {
+                                        MrBean.Attackk();
+                                        Goblin.TakeDamageGoblin();
+                                        Goblin.GoblinHP = Goblin.GoblinHP - 10;
+                                        if (Goblin.GoblinHP == 0)
+                                        {
+                                            Console.WriteLine("The goblin died!");
+                                        }
+                                        else
+                                        {
+                                            Goblin.GoblinAttack();
+                                            Console.WriteLine("Mr Bean takes 10 damage!");
+                                            MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                                            goto Combat_start;
+                                        }
+                                        Console.ReadKey();
+                                    }
+                                    else if (choice2 == "2")
+                                    {
+                                        MrBean.Dabberino();
+                                        goto End_Combat;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Mr Bean cant do that!");
+                                        System.Threading.Thread.Sleep(1250);
+                                        goto Combat_start;
+                                    }
+                                }
+                                else if (choice1 == "2")
+                                {
+                                    Goblin.GoblinAttack();
+                                    Console.WriteLine("Mr Bean dodges!");
+                                    Console.WriteLine("Goblins attack misses!");
+                                    goto Combat_start;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Mr Bean cant do that!(Type 1 to Attack & 2 to Dodge)");
+                                    System.Threading.Thread.Sleep(2000);
+                                    goto Combat_start;
+                                }
+                                End_Combat:
+                                Console.WriteLine("you win");
+                                Console.ReadLine();
+
                             }
                             Console.WriteLine("You beat the russian goblin");
                             Console.ReadKey();
@@ -321,7 +379,64 @@ namespace Chernobyl2077
                         }
                         else
                         {
-                            Console.WriteLine("Insert Combat");
+                            Console.WriteLine("You enter in combat with the russian goblin");
+                            Entity aaa = new Entity();
+                            Goblin Goblin = new Goblin();
+                            MrBean MrBean = new MrBean();
+                            Combat_start:
+                            Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
+                            string choice1 = (Console.ReadLine());
+                            if (choice1 == "1")
+                            {
+                                Console.WriteLine("\n1.Attack\n2.Dab");
+                                string choice2 = (Console.ReadLine());
+                                if (choice2 == "1")
+                                {
+                                    MrBean.Attackk();
+                                    Goblin.TakeDamageGoblin();
+                                    Goblin.GoblinHP = Goblin.GoblinHP - 10;
+                                    if (Goblin.GoblinHP == 0)
+                                    {
+                                        Console.WriteLine("The goblin died!");
+                                    }
+                                    else
+                                    {
+                                        Goblin.GoblinAttack();
+                                        Console.WriteLine("Mr Bean takes 10 damage!");
+                                        MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                                        goto Combat_start;
+                                    }
+                                    Console.ReadKey();
+                                }
+                                else if (choice2 == "2")
+                                {
+                                    MrBean.Dabberino();
+                                    goto End_Combat;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Mr Bean cant do that!");
+                                    System.Threading.Thread.Sleep(1250);
+                                    goto Combat_start;
+                                }
+                            }
+                            else if (choice1 == "2")
+                            {
+                                Goblin.GoblinAttack();
+                                Console.WriteLine("Mr Bean dodges!");
+                                Console.WriteLine("Goblins attack misses!");
+                                goto Combat_start;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Mr Bean cant do that!(Type 1 to Attack & 2 to Dodge)");
+                                System.Threading.Thread.Sleep(2000);
+                                goto Combat_start;
+                            }
+                            End_Combat:
+                            Console.WriteLine("you win");
+                            Console.ReadLine();
+
                         }
                         Console.WriteLine("The goblin falls down after the hard fight");
                         Console.ReadKey();
@@ -379,6 +494,63 @@ namespace Chernobyl2077
                             {
                                 Combat3:
                                 Console.WriteLine("You enter in combat with the Russian goblin");
+                                Entity aaa = new Entity();
+                                Goblin Goblin = new Goblin();
+                                MrBean MrBean = new MrBean();
+                                Combat_start:
+                                Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
+                                string choice1 = (Console.ReadLine());
+                                if (choice1 == "1")
+                                {
+                                    Console.WriteLine("\n1.Attack\n2.Dab");
+                                    string choice2 = (Console.ReadLine());
+                                    if (choice2 == "1")
+                                    {
+                                        MrBean.Attackk();
+                                        Goblin.TakeDamageGoblin();
+                                        Goblin.GoblinHP = Goblin.GoblinHP - 10;
+                                        if (Goblin.GoblinHP == 0)
+                                        {
+                                            Console.WriteLine("The goblin died!");
+                                        }
+                                        else
+                                        {
+                                            Goblin.GoblinAttack();
+                                            Console.WriteLine("Mr Bean takes 10 damage!");
+                                            MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                                            goto Combat_start;
+                                        }
+                                        Console.ReadKey();
+                                    }
+                                    else if (choice2 == "2")
+                                    {
+                                        MrBean.Dabberino();
+                                        goto End_Combat;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Mr Bean cant do that!");
+                                        System.Threading.Thread.Sleep(1250);
+                                        goto Combat_start;
+                                    }
+                                }
+                                else if (choice1 == "2")
+                                {
+                                    Goblin.GoblinAttack();
+                                    Console.WriteLine("Mr Bean dodges!");
+                                    Console.WriteLine("Goblins attack misses!");
+                                    goto Combat_start;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Mr Bean cant do that!(Type 1 to Attack & 2 to Dodge)");
+                                    System.Threading.Thread.Sleep(2000);
+                                    goto Combat_start;
+                                }
+                                End_Combat:
+                                Console.WriteLine("you win");
+                                Console.ReadLine();
+
                             }
                             Console.WriteLine("You beat the goblin");
                             Console.ReadKey();
@@ -391,9 +563,138 @@ namespace Chernobyl2077
                             Console.WriteLine("Who was he talking about");
                             Console.ReadKey();
                             Console.WriteLine("I dont have time for figuring this out, i have to keep moving");
+                            Console.ReadKey();
+                            Magazin:
+                            Console.WriteLine("You head to a bulding that has 'magazin' written on it");
+                            Console.ReadKey();
+                            Console.WriteLine("You head inside");
+                            Console.ReadKey();
+                            Disturbing:
+                            Console.WriteLine("What you see in there is very disturbing");
+                            Console.WriteLine("Do you wish to see what Mr.B saw?\n1.Yes\n.2No");
+                            string ChMagazin = Console.ReadLine();
+                            if (ChMagazin == "1")
+                            {
+                                using (StreamReader HangMan = new StreamReader(path + @"\HangingMan.txt"))
+                                {
+                                    string HangedMan = HangMan.ReadToEnd();
+                                    Console.WriteLine(HangedMan);
+                                    Console.ReadKey();
+                                }
+                            }
+                            if (ChMagazin == "2")
+                            {
+                                Console.WriteLine("Good choice");
+                                Console.ReadKey();
+                            }
+                            Console.WriteLine("Mr.B: This is what dabbing causes");
+                            Console.ReadKey();
+                            Console.WriteLine("Bean heads out of the store");
+                            Console.ReadKey();
+                            Console.WriteLine("He sees a waterbottle on the ground");
+                            Console.ReadKey();
+                            Console.WriteLine("Bean looks around himself and sees a russian goblin");
+                            Console.ReadKey();
+                            Console.WriteLine("Russian Goblin:Ya sobirayus' tebya ubit'");
+                            Console.ReadKey();
+                            Console.WriteLine("Bean preapers to fight");
+                            Console.ReadKey();
+                            Console.WriteLine("Goblin jumps at Bean and combat begins");
+                            if (Secret_Code == "3499")
+                            {
+                                Console.WriteLine("*****************Skipping Combat*****************");
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                Combat3:
+                                Console.WriteLine("You enter in combat with the Russian goblin");
+                                Entity aaa = new Entity();
+                                Goblin Goblin = new Goblin();
+                                MrBean MrBean = new MrBean();
+                                Combat_start:
+                                Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
+                                string choice1 = (Console.ReadLine());
+                                if (choice1 == "1")
+                                {
+                                    Console.WriteLine("\n1.Attack\n2.Dab");
+                                    string choice2 = (Console.ReadLine());
+                                    if (choice2 == "1")
+                                    {
+                                        MrBean.Attackk();
+                                        Goblin.TakeDamageGoblin();
+                                        Goblin.GoblinHP = Goblin.GoblinHP - 10;
+                                        if (Goblin.GoblinHP == 0)
+                                        {
+                                            Console.WriteLine("The goblin died!");
+                                        }
+                                        else
+                                        {
+                                            Goblin.GoblinAttack();
+                                            Console.WriteLine("Mr Bean takes 10 damage!");
+                                            MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                                            goto Combat_start;
+                                        }
+                                        Console.ReadKey();
+                                    }
+                                    else if (choice2 == "2")
+                                    {
+                                        MrBean.Dabberino();
+                                        goto End_Combat;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Mr Bean cant do that!");
+                                        System.Threading.Thread.Sleep(1250);
+                                        goto Combat_start;
+                                    }
+                                }
+                                else if (choice1 == "2")
+                                {
+                                    Goblin.GoblinAttack();
+                                    Console.WriteLine("Mr Bean dodges!");
+                                    Console.WriteLine("Goblins attack misses!");
+                                    goto Combat_start;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Mr Bean cant do that!(Type 1 to Attack & 2 to Dodge)");
+                                    System.Threading.Thread.Sleep(2000);
+                                    goto Combat_start;
+                                }
+                                End_Combat:
+                                Console.WriteLine("you win");
+                                Console.ReadLine();
 
+                            }
+                            Console.WriteLine("Bean is getting tired, but he can't fall asleep");
+                            Console.ReadKey();
+                            Console.WriteLine("Suddenly bean hears multiple goblins behind him");
+                            Console.WriteLine("Bean gets knocked out");
+                            Console.ReadKey();
+                            Console.WriteLine("");
+                            Console.ReadKey();
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.ReadKey();
+                            Console.Clear();
+                            Console.WriteLine("Bean wakes up");
+                            Console.ReadKey();
+                            Console.WriteLine("Mr.B: What just happened?");
+                            Console.ReadKey();
+                            Console.WriteLine("SILENCE!");
+                            Console.ReadKey();
+                            Console.WriteLine("Bean looks up and he sees a dabbing russian goblin, who can speak english");
+                            Console.ReadKey();
+                            Console.WriteLine("Mr.B: Where am i?!?");
+                            Console.ReadKey();
+                            Console.WriteLine("You're in the house of The Chosen One, The One who is best at dabbing, Jake Paul");
+                            Console.ReadKey();
+                            Console.WriteLine("Now we know what was that note about");
+                            Console.ReadKey();
 
                         }
+
                     }
                     if (choiseRoad == "3")
                     {
