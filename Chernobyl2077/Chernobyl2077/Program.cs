@@ -12,11 +12,12 @@ namespace Chernobyl2077
         {
             Random rand = new Random();
 
-            if (rand.Next(0, 2) == 0)
+            if (rand.Next(0, 49) <= 25)
                 Console.WriteLine("You died");
             else
                 Console.WriteLine("You live");
             Console.ReadLine();
+
         }
     }
 }
