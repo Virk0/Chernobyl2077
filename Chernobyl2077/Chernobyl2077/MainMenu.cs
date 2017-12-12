@@ -20,7 +20,7 @@ namespace Chernobyl2077
             for (int i = 1; i < 100000; i++)
             {
                 mainArt:
-                if (watch.Elapsed.TotalMilliseconds >= 6000)
+                if (watch.Elapsed.TotalMilliseconds >= 4000)
                     break;
                 using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) //Vaheta User opilaseks [opilane][User]
                 {
@@ -30,7 +30,7 @@ namespace Chernobyl2077
                         Console.WriteLine(Icon);
                         string MLogo = Main_Logo.ReadToEnd();
                         Console.WriteLine(MLogo);
-                        System.Threading.Thread.Sleep(2900);
+                        System.Threading.Thread.Sleep(1900);
                         using (StreamReader Main_LogoB = new StreamReader(path + @"\MainLogoBad.txt")) //Vaheta User opilaseks [opilane]
                         {
                             Console.Clear();
