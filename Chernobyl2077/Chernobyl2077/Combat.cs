@@ -8,7 +8,7 @@ namespace Chernobyl2077
 {
     class Combat
     {
-        static void Main(string[] args)
+        static void gayd(string[] args)
         {
 
             Entity aaa = new Entity();
