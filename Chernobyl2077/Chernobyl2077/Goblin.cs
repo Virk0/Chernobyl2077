@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    class Goblin
+    class Goblin : Entity
     {
+        public void TakeDamageGoblin()
+        {
+            Console.WriteLine("Goblin "+TakeDamage());
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace Chernobyl2077
     {
         static void Main(string[] args)
         {
+            Combat_start:
             Entity Goblin = new Entity();
             MrBean MrBean = new MrBean();
             Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
@@ -24,15 +25,28 @@ namespace Chernobyl2077
                     Console.WriteLine("Goblin "+Goblin.TakeDamage());
                     Console.ReadKey();
                 }
+                else if (choice2=="2")
+                {
+                   MrBean.Dabberino();
+                }
                 else
                 {
-                    Console.WriteLine("ehh");
+                    Console.WriteLine("Mr Bean cant do that!");
+                    System.Threading.Thread.Sleep(1250);
+                    goto Combat_start;
                 }
+            }
+            else if(choice1=="2")
+            {
+                Console.WriteLine("Mr Bean dodges!");
             }
             else
             {
-                Console.WriteLine("esel");
+                Console.WriteLine("Mr Bean cant do that!");
+                System.Threading.Thread.Sleep(1250);
+                goto Combat_start;
             }
+
         }
     }
 }
