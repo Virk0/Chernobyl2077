@@ -13,7 +13,13 @@ namespace Chernobyl2077
     {
         public static void GPAS()
         {
-
+            using (StreamReader Dev = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Development.txt"))
+            {
+                Console.Clear();
+                string Deve = Dev.ReadToEnd();
+                Console.WriteLine(Deve);
+                Console.ReadLine();
+            }
         }
     }
 }

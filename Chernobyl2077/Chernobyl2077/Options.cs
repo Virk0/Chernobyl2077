@@ -11,13 +11,18 @@ namespace Chernobyl2077
 {
     class Options
     {
+        public string AutoScroll()
+        {
+            string AutoScroll = Console.ReadLine(); ;
+            return AutoScroll;
+        }
         public static void Op()
         {
             Options:
             Console.Clear();
-            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
             {
-                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
                 {
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -30,22 +35,7 @@ namespace Chernobyl2077
             string OptionsCh = Console.ReadLine();
             if (OptionsCh == "1")
             {
-                Console.WriteLine("Do you want autoscroll?\n1.Yes\n2.No");
-                string AutoScrollCh = Console.ReadLine();
-                if (AutoScrollCh == "1")
-                {
-                    Console.WriteLine("Turning AutoScroll on");
-                    System.Threading.Thread.Sleep(2000);
-                    Options.Op();
-                }
-                if (AutoScrollCh == "2")
-                {
-                    Console.WriteLine("Turning AutoScroll off");
-                    System.Threading.Thread.Sleep(2000);
-                    Options.Op();
-
-                }
-
+                Console.WriteLine("Ya Yiit");
             }
             if (OptionsCh == "3")
             {

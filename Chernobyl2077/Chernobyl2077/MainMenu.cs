@@ -21,16 +21,16 @@ namespace Chernobyl2077
                 mainArt:
                 if (watch.Elapsed.TotalMilliseconds >= 6000)
                     break;
-                using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane][User]
                 {
-                    using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                    using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
                     {
                         string Icon = Main_Icon.ReadToEnd();
                         Console.WriteLine(Icon);
                         string MLogo = Main_Logo.ReadToEnd();
                         Console.WriteLine(MLogo);
                         System.Threading.Thread.Sleep(2900);
-                        using (StreamReader Main_LogoB = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogoBad.txt")) //Vaheta User opilaseks [opilane]
+                        using (StreamReader Main_LogoB = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogoBad.txt")) //Vaheta User opilaseks [opilane]
                         {
                             Console.Clear();
                             Console.WriteLine(Icon);
@@ -47,9 +47,9 @@ namespace Chernobyl2077
             }
             watch.Stop();
             MainMenuLoaded:
-            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane] 
+            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane] 
             {
-                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
                 { 
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -63,9 +63,9 @@ namespace Chernobyl2077
             Console.WriteLine("                                                                                                 Press any key to continue");
             Console.ReadKey();
             Console.Clear();
-            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
             {
-                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
                 {
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -81,11 +81,20 @@ namespace Chernobyl2077
             string choise1 = Console.ReadLine();
             if (choise1 == "1")
             {
-                GameplayNAS.GPNAS();
+                Console.WriteLine("Do you wish to turn on autoscroll?\n1.Yes\n2.No");
+                string ChAS = Console.ReadLine();
+                if (ChAS == "1")
+                {
+                    GameplayAS.GPAS();
+                }
+                if (ChAS == "2")
+                {
+                    GameplayNAS.GPNAS();
+                }
             }
             if (choise1 == "2")
             {
-                using (StreamReader Dev = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Development.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Dev = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Development.txt")) //Vaheta User opilaseks [opilane]
                 {
                     Options.Op();
                 }
@@ -102,9 +111,9 @@ namespace Chernobyl2077
         public static void MaMeLoaded()
         {
             MainMenuLoaded:
-            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
             {
-                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
                 {
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -120,20 +129,20 @@ namespace Chernobyl2077
             string choise1 = Console.ReadLine();
             if (choise1 == "1")
             {
-                //if (Options.Op.OptionsCh == "1")
-                //{
-                //    GameplayAS.GPAS();
-
-                //}
-                //if (Options.Op.OptionsCh == "2")
-                //{
-                //    GameplayNAS.GPNAS();
-                //}
-                GameplayNAS.GPNAS();
+                Console.WriteLine("Do you wish to turn on autoscroll?\n1.Yes\n2.No");
+                string ChAS = Console.ReadLine();
+                if (ChAS == "1")
+                {
+                    GameplayAS.GPAS();
+                }
+                if (ChAS == "2")
+                {
+                    GameplayNAS.GPNAS();
+                }
             }
             if (choise1 == "2")
             {
-                using (StreamReader Dev = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\Development.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Dev = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Development.txt")) //Vaheta User opilaseks [opilane]
                 {
                     Options.Op();
                 }
