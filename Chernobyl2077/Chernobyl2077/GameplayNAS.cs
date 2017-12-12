@@ -41,8 +41,8 @@ namespace Chernobyl2077
                 Console.WriteLine("You enter in combat with the squatting man, who can only speak gibberish!");
             Combat1:
                 Console.WriteLine("Insert Combat system[NO COMBAT YET IN GAME]");
-                System.Threading.Thread.Sleep(3000);
-                string Outcome = "Player won";
+            Console.ReadKey();
+            string Outcome = "Player won";
                 if (Outcome == "Player won")
                 {
                     Console.WriteLine("You proceed to a temporary station located near you");
@@ -75,7 +75,7 @@ namespace Chernobyl2077
                     Console.WriteLine("Poor Chernobyl Gopniks");
                     Console.ReadKey();
                     Console.WriteLine("You start walking down the road[4 sec]");
-                    System.Threading.Thread.Sleep(4000);
+                Console.ReadKey();
                 Roads:
                     Console.WriteLine("The road splits to three:\n1.Dzheff memy\n2.net avtomobiley\n3.banan\n4.smert'");
                     Console.WriteLine("Which are you gonna go?");
@@ -83,8 +83,8 @@ namespace Chernobyl2077
                     if (choiseRoad == "1")
                     {
                         Console.WriteLine("You decide do go to Dzheff memy");
-                        System.Threading.Thread.Sleep(3000);
-                        Console.WriteLine("You arrive");
+                    Console.ReadKey();
+                    Console.WriteLine("You arrive");
                         Console.WriteLine("You hear 'MYNAMAJEF' from far away");
                         Console.WriteLine("You see 2 Gopniks squatting nearby");
                         Console.ReadKey();
@@ -101,8 +101,8 @@ namespace Chernobyl2077
                     if (choiseRoad == "2")
                     {
                         Console.WriteLine("You decide do go to net avtomobiley");
-                        System.Threading.Thread.Sleep(3000);
-                        Console.WriteLine("You arrive");
+                    Console.ReadKey();
+                    Console.WriteLine("You arrive");
                         Console.WriteLine("You don't see any cars nearby");
                         Console.ReadKey();
                         Console.WriteLine("But what you do see is 3 Gopniks, oh great");
@@ -111,8 +111,8 @@ namespace Chernobyl2077
                     if (choiseRoad == "3")
                     {
                         Console.WriteLine("You decide do go to banan");
-                        System.Threading.Thread.Sleep(3000);
-                        Console.WriteLine("You arrive");
+                    Console.ReadKey();
+                    Console.WriteLine("You arrive");
                     Banana:
                         Console.WriteLine("You see a banana on the ground");
                         Console.ReadKey();
@@ -123,8 +123,8 @@ namespace Chernobyl2077
                         {
                             Console.WriteLine("You ate a radiated banana");
                             Console.WriteLine("You smart");
-                            System.Threading.Thread.Sleep(2000);
-                            using (StreamReader DS = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
+                        Console.ReadKey();
+                        using (StreamReader DS = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
                         {
                                 String DS_ = DS.ReadToEnd();
                                 Console.WriteLine(DS_);
@@ -133,14 +133,14 @@ namespace Chernobyl2077
                                 if (choiseBaDead == "1")
                                 {
                                     Console.WriteLine("Returning to your choise");
-                                    System.Threading.Thread.Sleep(1000);
-                                    goto Banana;
+                                Console.ReadKey();
+                                goto Banana;
                                 }
                                 if (choiseBaDead == "2")
                                 {
                                     Console.WriteLine("Okay");
-                                    System.Threading.Thread.Sleep(1000);
-                                    goto Roads;
+                                Console.ReadKey();
+                                goto Roads;
                                 }
                             }
                         }
@@ -156,10 +156,10 @@ namespace Chernobyl2077
                     {
                         Console.WriteLine("You decided do go to smert'");
                         Console.WriteLine("smert' could mean death in russian");
-                        System.Threading.Thread.Sleep(3000);
-                        Console.WriteLine("you arrive");
+                    Console.ReadKey();
+                    Console.WriteLine("you arrive");
                         Console.WriteLine("you are dying from radiation poisoning");
-                        using (StreamReader DeathScreen2 = new StreamReader(@"C:\Users\User\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
+                        using (StreamReader DeathScreen2 = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
                     {
                             string DS2 = DeathScreen2.ReadToEnd();
                             Console.WriteLine(DS2);
@@ -168,14 +168,14 @@ namespace Chernobyl2077
                             if (choiseBaDead == "1")
                             {
                                 Console.WriteLine("Returning to roads");
-                                System.Threading.Thread.Sleep(1000);
-                                goto Roads;
+                            Console.ReadKey();
+                            goto Roads;
                             }
                             if (choiseBaDead == "2")
                             {
                                 Console.WriteLine("Okay");
-                                System.Threading.Thread.Sleep(1000);
-                                Environment.Exit(0);
+                            Console.ReadKey();
+                            Environment.Exit(0);
                             }
                         }
                     }
