@@ -97,15 +97,15 @@ namespace Chernobyl2077
                         Console.ReadKey();
                         Console.WriteLine("You arrive");
                         Console.WriteLine("You hear 'MYNAMAJEF' from far away");
-                        Console.WriteLine("You see a Gopnik squatting nearby");
+                        Console.WriteLine("You see a Russian goblin squatting nearby");
                         Console.ReadKey();
-                        Console.WriteLine("Russian Gopnik: Ubiraysya otsyuda!");
+                        Console.WriteLine("Russian Goblin: Ubiraysya otsyuda!");
                         Console.WriteLine("You dont understand anything, as usual");
                         Console.ReadKey();
                         Console.WriteLine("Mr.B: Can't you just speak English?");
                         Console.WriteLine("Mr Bean realised that was a dumb question");
                         Console.ReadKey();
-                        Console.WriteLine("The Gopnik decides to attack");
+                        Console.WriteLine("The Goblin decides to attack");
                         if (Secret_Code == "3499")
                         {
                             Console.WriteLine("*****************Skipping combat*****************");
@@ -177,13 +177,13 @@ namespace Chernobyl2077
                             else
                             {
                                 Combat3:
-                                Console.WriteLine("You enter in combat with the Gopnik");
+                                Console.WriteLine("You enter in combat with the Goblin");
                             }
-                            Console.WriteLine("You beat the gopnik");
+                            Console.WriteLine("You beat the russian goblin");
                             Console.ReadKey();
                             Console.WriteLine("He managed to say something before passing out");
                             Console.ReadKey();
-                            Console.WriteLine("Gopnik:'H-he is too stro-ong for y-you'");
+                            Console.WriteLine("Russian Goblin:'H-he is too stro-ong for y-you'");
                             Console.ReadKey();
                             Console.WriteLine("He passed out");
                             Console.ReadKey();
@@ -202,7 +202,7 @@ namespace Chernobyl2077
                         Console.WriteLine("You arrive");
                         Console.WriteLine("You don't see any cars nearby");
                         Console.ReadKey();
-                        Console.WriteLine("But what you do see is another Gopnik, oh great");
+                        Console.WriteLine("But what you do see is another russian goblin, oh great");
                         if (Secret_Code == "3499")
                         {
                             Console.WriteLine("*****************Skipping Combat*****************");
@@ -212,7 +212,7 @@ namespace Chernobyl2077
                         {
                             Console.WriteLine("Insert Combat");
                         }
-                        Console.WriteLine("The gopnik falls down after the hard fight");
+                        Console.WriteLine("The goblin falls down after the hard fight");
                         Console.ReadKey();
                         Console.WriteLine("You see a roadsign nearby with 'Banan' written on it");
                         Console.ReadKey();
@@ -267,13 +267,13 @@ namespace Chernobyl2077
                             else
                             {
                                 Combat3:
-                                Console.WriteLine("You enter in combat with the Gopnik");
+                                Console.WriteLine("You enter in combat with the Russian goblin");
                             }
-                            Console.WriteLine("You beat the gopnik");
+                            Console.WriteLine("You beat the goblin");
                             Console.ReadKey();
                             Console.WriteLine("He managed to say something before passing out");
                             Console.ReadKey();
-                            Console.WriteLine("Gopnik:'H-he is too stro-ong for y-you'");
+                            Console.WriteLine("Russian Goblin:'H-he is too stro-ong for y-you'");
                             Console.ReadKey();
                             Console.WriteLine("He passed out");
                             Console.ReadKey();
