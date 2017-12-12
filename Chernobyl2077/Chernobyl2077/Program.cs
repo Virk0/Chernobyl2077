@@ -35,18 +35,23 @@ namespace Chernobyl2077
                             Console.WriteLine("The Squid dabs!");
                             System.Threading.Thread.Sleep(500);
                             Console.WriteLine("Mr Bean tried to attack, but he was too slow!");
+                            System.Threading.Thread.Sleep(1000);
                             Console.WriteLine("Mr Bean died!");
                         }
                         else if (choice4 == "2")
                         {
                             Console.WriteLine("Mr Bean and The Squid dabbed at the same time!");
+                            System.Threading.Thread.Sleep(500);
                             Console.WriteLine("They canceled eachother's dabs out, making them both ineffective!");
+                            System.Threading.Thread.Sleep(1000);
                             goto Start_Combat;
                         }
                         else
                         {
                             Console.WriteLine("Mr Bean stood still, confused.");
+                            System.Threading.Thread.Sleep(1000);
                             Console.WriteLine("The Squid dabs, doing "+Squidward.SquidDabAP+" damage!");
+                            System.Threading.Thread.Sleep(1500);
                             Console.WriteLine("Mr Bean dies!");
                             //
                             //Reset situation
@@ -56,7 +61,9 @@ namespace Chernobyl2077
                     else if (choice3 == "2")
                     {
                         Console.WriteLine("The Squid dabs!");
+                        System.Threading.Thread.Sleep(500);
                         Console.WriteLine("Mr Bean dodges!");
+                        System.Threading.Thread.Sleep(500);
                         Console.WriteLine("The Squids dab was ineffective!");
                     }
                 }
@@ -78,7 +85,7 @@ namespace Chernobyl2077
                         else
                         {
                             Squidward.SqAttack();
-                            Console.WriteLine("Mr Bean takes 10 damage!");
+                            Console.WriteLine("Mr Bean takes 20 damage!");
                             MrBean.mrBeanHP = MrBean.mrBeanHP - 20;
                             goto Start_Combat;
                         }
