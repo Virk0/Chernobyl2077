@@ -13,7 +13,9 @@ namespace Chernobyl2077
     {
         public static void GPNAS()
         {
-                Console.WriteLine("Press enter to proceed");
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Art");
+            Console.WriteLine("Press enter to proceed");
+            string Secret_Code = Console.ReadLine();
                 Console.ReadKey();
                 Console.Clear();
                 Console.WriteLine("Mr beany has finally arrived in chernobyl");
@@ -40,10 +42,19 @@ namespace Chernobyl2077
                 Console.ReadKey();
                 Console.WriteLine("You enter in combat with the squatting man, who can only speak gibberish!");
             Combat1:
+            if (Secret_Code == "3499")
+            {
+                Console.WriteLine("*****************SKipping Combat*****************");
+                Console.ReadKey();
+            }
+            if ( Secret_Code != "3499")
+            {
                 Console.WriteLine("Insert Combat system[NO COMBAT YET IN GAME]");
+            }
             Console.ReadKey();
             string Outcome = "Player won";
                 if (Outcome == "Player won")
+            {
                 {
                     Console.WriteLine("You proceed to a temporary station located near you");
                     Console.ReadKey();
@@ -74,19 +85,19 @@ namespace Chernobyl2077
                     System.Threading.Thread.Sleep(500);
                     Console.WriteLine("Poor Chernobyl Gopniks");
                     Console.ReadKey();
-                    Console.WriteLine("You start walking down the road[4 sec]");
-                Console.ReadKey();
-                Roads:
-                    Console.WriteLine("The road splits to three:\n1.Dzheff memy\n2.net avtomobiley\n3.banan\n4.smert'");
+                    Console.WriteLine("You start walking down the road");
+                    Console.ReadKey();
+                    Roads:
+                    Console.WriteLine("The road splits to three:\n1.Dzheff memy\n2.net avtomobiley\n3.smert'");//\n3.banan\n4.smert'");
                     Console.WriteLine("Which are you gonna go?");
                     string choiseRoad = Console.ReadLine();
                     if (choiseRoad == "1")
                     {
                         Console.WriteLine("You decide do go to Dzheff memy");
-                    Console.ReadKey();
-                    Console.WriteLine("You arrive");
+                        Console.ReadKey();
+                        Console.WriteLine("You arrive");
                         Console.WriteLine("You hear 'MYNAMAJEF' from far away");
-                        Console.WriteLine("You see 2 Gopniks squatting nearby");
+                        Console.WriteLine("You see a Gopnik squatting nearby");
                         Console.ReadKey();
                         Console.WriteLine("Russian Gopnik: Ubiraysya otsyuda!");
                         Console.WriteLine("You dont understand anything, as usual");
@@ -94,26 +105,31 @@ namespace Chernobyl2077
                         Console.WriteLine("Mr.B: Can't you just speak English?");
                         Console.WriteLine("Mr Bean realised that was a dumb question");
                         Console.ReadKey();
-                        Console.WriteLine("2 Gopniks decide to attack");
-                    Combat2:
-                        Console.WriteLine("You enter combat with the 2 russian copniks");
-                    }
-                    if (choiseRoad == "2")
-                    {
-                        Console.WriteLine("You decide do go to net avtomobiley");
-                    Console.ReadKey();
-                    Console.WriteLine("You arrive");
-                        Console.WriteLine("You don't see any cars nearby");
+                        Console.WriteLine("The Gopnik decides to attack");
+                        if (Secret_Code == "3499")
+                        {
+                            Console.WriteLine("*****************Skipping combat*****************");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Combat2:
+                            Console.WriteLine("You enter combat with the russian copnik");
+                        }
+                        Console.WriteLine("After a long fight you beat him");
                         Console.ReadKey();
-                        Console.WriteLine("But what you do see is 3 Gopniks, oh great");
-
-                    }
-                    if (choiseRoad == "3")
-                    {
+                        Console.WriteLine("You find 2 rubels on him");
+                        Console.ReadKey();
+                        Console.WriteLine("They aren't worth much");
+                        Console.ReadKey();
+                        Console.WriteLine("Mr.B: I have to keep moving, i dont want to die to radiation");
+                        Console.ReadKey();
+                        Console.WriteLine("You see a roadsign ahead, it  says 'Banan' on it");
+                        Console.ReadKey();
                         Console.WriteLine("You decide do go to banan");
-                    Console.ReadKey();
-                    Console.WriteLine("You arrive");
-                    Banana:
+                        Console.ReadKey();
+                        Console.WriteLine("You arrive");
+                        Banana:
                         Console.WriteLine("You see a banana on the ground");
                         Console.ReadKey();
                         Console.WriteLine("Mr.B: Hm, should i eat it?");
@@ -123,9 +139,9 @@ namespace Chernobyl2077
                         {
                             Console.WriteLine("You ate a radiated banana");
                             Console.WriteLine("You smart");
-                        Console.ReadKey();
-                        using (StreamReader DS = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
-                        {
+                            Console.ReadKey();
+                            using (StreamReader DS = new StreamReader(path + @"\DeathScreen.txt"))
+                            {
                                 String DS_ = DS.ReadToEnd();
                                 Console.WriteLine(DS_);
                                 Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
@@ -133,34 +149,151 @@ namespace Chernobyl2077
                                 if (choiseBaDead == "1")
                                 {
                                     Console.WriteLine("Returning to your choise");
-                                Console.ReadKey();
-                                goto Banana;
+                                    Console.ReadKey();
+                                    goto Banana;
                                 }
                                 if (choiseBaDead == "2")
                                 {
                                     Console.WriteLine("Okay");
-                                Console.ReadKey();
-                                goto Roads;
+                                    Console.ReadKey();
+                                    goto Roads;
                                 }
                             }
                         }
                         if (choiseBanana == "2")
                         {
+
                             Console.WriteLine("Good job, you didn't eat a radiated banana");
-                            Console.WriteLine("But you still see those russians");
-                            Console.WriteLine("Actually 3 of them");
+                            Console.ReadKey();
+                            Console.WriteLine("But you still find a russian");
+                            Console.ReadKey();
+                            Console.WriteLine("And he start running towards you");
+                            Console.ReadKey();
+                            if (Secret_Code == "3499")
+                            {
+                                Console.WriteLine("*****************Skipping Combat*****************");
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                Combat3:
+                                Console.WriteLine("You enter in combat with the Gopnik");
+                            }
+                            Console.WriteLine("You beat the gopnik");
+                            Console.ReadKey();
+                            Console.WriteLine("He managed to say something before passing out");
+                            Console.ReadKey();
+                            Console.WriteLine("Gopnik:'H-he is too stro-ong for y-you'");
+                            Console.ReadKey();
+                            Console.WriteLine("He passed out");
+                            Console.ReadKey();
+                            Console.WriteLine("Who was he talking about");
+                            Console.ReadKey();
+                            Console.WriteLine("I dont have time for figuring this out, i have to keep moving");
+
+
                         }
 
                     }
-                    if (choiseRoad == "4")
+                    if (choiseRoad == "2")
+                    {
+                        Console.WriteLine("You decide do go to net avtomobiley");
+                        Console.ReadKey();
+                        Console.WriteLine("You arrive");
+                        Console.WriteLine("You don't see any cars nearby");
+                        Console.ReadKey();
+                        Console.WriteLine("But what you do see is another Gopnik, oh great");
+                        if (Secret_Code == "3499")
+                        {
+                            Console.WriteLine("*****************Skipping Combat*****************");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Insert Combat");
+                        }
+                        Console.WriteLine("The gopnik falls down after the hard fight");
+                        Console.ReadKey();
+                        Console.WriteLine("You see a roadsign nearby with 'Banan' written on it");
+                        Console.ReadKey();
+                        Console.WriteLine("You decide do go to banan");
+                        Console.ReadKey();
+                        Console.WriteLine("You arrive");
+                        Banana:
+                        Console.WriteLine("You see a banana on the ground");
+                        Console.ReadKey();
+                        Console.WriteLine("Mr.B: Hm, should i eat it?");
+                        Console.WriteLine("1.Yes\n2.No");
+                        string choiseBanana = Console.ReadLine();
+                        if (choiseBanana == "1")
+                        {
+                            Console.WriteLine("You ate a radiated banana");
+                            Console.WriteLine("You smart");
+                            Console.ReadKey();
+                            using (StreamReader DS = new StreamReader(path + @"\DeathScreen.txt"))
+                            {
+                                String DS_ = DS.ReadToEnd();
+                                Console.WriteLine(DS_);
+                                Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
+                                string choiseBaDead = Console.ReadLine();
+                                if (choiseBaDead == "1")
+                                {
+                                    Console.WriteLine("Returning to your choise");
+                                    Console.ReadKey();
+                                    goto Banana;
+                                }
+                                if (choiseBaDead == "2")
+                                {
+                                    Console.WriteLine("Okay");
+                                    Console.ReadKey();
+                                    goto Roads;
+                                }
+                            }
+                        }
+                        if (choiseBanana == "2")
+                        {
+
+                            Console.WriteLine("Good job, you didn't eat a radiated banana");
+                            Console.ReadKey();
+                            Console.WriteLine("But you still find a russian");
+                            Console.ReadKey();
+                            Console.WriteLine("And he start running towards you");
+                            Console.ReadKey();
+                            if (Secret_Code == "3499")
+                            {
+                                Console.WriteLine("*****************Skipping Combat*****************");
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                Combat3:
+                                Console.WriteLine("You enter in combat with the Gopnik");
+                            }
+                            Console.WriteLine("You beat the gopnik");
+                            Console.ReadKey();
+                            Console.WriteLine("He managed to say something before passing out");
+                            Console.ReadKey();
+                            Console.WriteLine("Gopnik:'H-he is too stro-ong for y-you'");
+                            Console.ReadKey();
+                            Console.WriteLine("He passed out");
+                            Console.ReadKey();
+                            Console.WriteLine("Who was he talking about");
+                            Console.ReadKey();
+                            Console.WriteLine("I dont have time for figuring this out, i have to keep moving");
+
+
+                        }
+                    }
+                    if (choiseRoad == "3")
                     {
                         Console.WriteLine("You decided do go to smert'");
                         Console.WriteLine("smert' could mean death in russian");
-                    Console.ReadKey();
-                    Console.WriteLine("you arrive");
+                        Console.ReadKey();
+                        Console.WriteLine("you arrive");
+                        Console.ReadKey();
                         Console.WriteLine("you are dying from radiation poisoning");
-                        using (StreamReader DeathScreen2 = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\DeathScreen.txt")) //Vaheta User opilaseks [opilane]
-                    {
+                        using (StreamReader DeathScreen2 = new StreamReader(path + @"\DeathScreen.txt"))
+                        {
                             string DS2 = DeathScreen2.ReadToEnd();
                             Console.WriteLine(DS2);
                             Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
@@ -168,14 +301,14 @@ namespace Chernobyl2077
                             if (choiseBaDead == "1")
                             {
                                 Console.WriteLine("Returning to roads");
-                            Console.ReadKey();
-                            goto Roads;
+                                Console.ReadKey();
+                                goto Roads;
                             }
                             if (choiseBaDead == "2")
                             {
                                 Console.WriteLine("Okay");
-                            Console.ReadKey();
-                            Environment.Exit(0);
+                                Console.ReadKey();
+                                Environment.Exit(0);
                             }
                         }
                     }
@@ -184,7 +317,9 @@ namespace Chernobyl2077
                         goto Roads;
                     }
 
+
                 }
+            }
                 if (Outcome == "Player lost")
                 {
                     Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
@@ -192,7 +327,8 @@ namespace Chernobyl2077
                     if (choise2 == "1")
                     {
                         Console.WriteLine("Returning");
-                        Console.WriteLine("");
+                    System.Threading.Thread.Sleep(1000);
+                    Console.WriteLine("");
                         Console.WriteLine("");
                         Console.WriteLine("");
                         goto Combat1;

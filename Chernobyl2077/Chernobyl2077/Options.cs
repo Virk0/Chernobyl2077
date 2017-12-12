@@ -18,11 +18,12 @@ namespace Chernobyl2077
         }
         public static void Op()
         {
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Art");
             Options:
             Console.Clear();
-            using (StreamReader Main_Logo = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+            using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) //Vaheta User opilaseks [opilane]
             {
-                using (StreamReader Main_Icon = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) //Vaheta User opilaseks [opilane]
                 {
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -30,12 +31,16 @@ namespace Chernobyl2077
                     Console.WriteLine(MLogo);
                 }
             }
-            Console.WriteLine("What do you wish to change\n1.Auto Scroll\n2.???\n3.Back to main menu");
+            Console.WriteLine("What do you wish to change\n1.???\n2.???\n3.Back to main menu");
             Console.WriteLine("Enter you choie:");
             string OptionsCh = Console.ReadLine();
             if (OptionsCh == "1")
             {
-                Console.WriteLine("Ya Yiit");
+                Console.WriteLine("Ya Yiit"); //Ei asu enam siin
+            }
+            if (OptionsCh == "2")
+            {
+                Console.WriteLine("There is nothing here");
             }
             if (OptionsCh == "3")
             {
