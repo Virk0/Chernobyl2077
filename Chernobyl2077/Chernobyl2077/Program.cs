@@ -10,14 +10,19 @@ namespace Chernobyl2077
     {
         static void Main(string[] args)
         {
+            start:
             Random rand = new Random();
 
-            if (rand.Next(0, 49) <= 25)
+            if (rand.Next(0, 100) <= 90)
                 Console.WriteLine("You died");
             else
                 Console.WriteLine("You live");
-            Console.ReadLine();
-
+            string dxd=(Console.ReadLine());
+            if (dxd == "r")
+            {
+                goto start;
+            }
+            
         }
     }
 }
