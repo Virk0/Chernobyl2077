@@ -14,15 +14,19 @@ namespace Chernobyl2077
         public void Dabberino()
         {
             Console.WriteLine("Mr Bean dabs!");
+            System.Threading.Thread.Sleep(1000);
             Console.WriteLine("The hater dies!");
+            System.Threading.Thread.Sleep(1000);
         }
         public void Attackk()
         {
             Console.WriteLine("Mr Bean" + Attack());
+            System.Threading.Thread.Sleep(1000);
         }
         public void TakeDamagee()
         {
             Console.WriteLine("Mr Bean " + TakeDamage1());
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

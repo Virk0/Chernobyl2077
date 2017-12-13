@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    public class Combat
+    class Combat
     {
         public static void gayd()
         {
@@ -14,8 +14,12 @@ namespace Chernobyl2077
             Entity aaa = new Entity();
             Goblin Goblin = new Goblin();
             MrBean MrBean = new MrBean();
+            Goblin.GoblinHPP();
             Combat_start:
-            Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
+
+            Console.WriteLine("\nGoblin: " + Goblin.GoblinHP);
+            Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
+            Console.WriteLine("\nWhat will Mr Bean do?\n1.Fight\n2.Dodge");
             string choice1 = (Console.ReadLine());
             if (choice1 == "1")
             {
@@ -25,8 +29,8 @@ namespace Chernobyl2077
                 {
                     MrBean.Attackk();
                     Goblin.TakeDamageGoblin();
-                    Goblin.GoblinHP = Goblin.GoblinHP - 10;
-                    if (Goblin.GoblinHP == 0)
+                    Goblin.GoblinHP = Goblin.GoblinHP - MrBean.mrBeanAP;
+                    if (Goblin.GoblinHP <= 0)
                     {
                         Console.WriteLine("The goblin died!");
                     }
@@ -35,15 +39,20 @@ namespace Chernobyl2077
                         Goblin.GoblinAttack();
                         Console.WriteLine("Mr Bean takes 10 damage!");
                         MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
-                        Console.WriteLine(MrBean.mrBeanHP);
-                        goto Combat_start;
+                        if (MrBean.mrBeanHP <= 0)
+                        {
+                            Console.WriteLine("MrBean died!");
+                        }
+                        else
+                        {
+                            goto Combat_start;
+                        }
                     }
                     Console.ReadKey();
                 }
                 else if (choice2 == "2")
                 {
                     MrBean.Dabberino();
-                    goto End_Combat;
                 }
                 else
                 {
@@ -65,9 +74,11 @@ namespace Chernobyl2077
                 System.Threading.Thread.Sleep(2000);
                 goto Combat_start;
             }
-            End_Combat:
             Console.WriteLine("you win");
-            Console.ReadKey();
+            Console.ReadLine();
+
+            Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
+            Console.ReadLine();
         }
     }
 }

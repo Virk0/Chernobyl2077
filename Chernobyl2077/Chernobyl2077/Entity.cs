@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    public class Entity
+    public class Entity : Random
     {
         public int HP, MP, AP;
         public string Attack()
