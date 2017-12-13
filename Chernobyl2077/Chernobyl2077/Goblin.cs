@@ -17,20 +17,23 @@ namespace Chernobyl2077
         
 
         Random randomValues = new Random();
-        if(randomValues)
-        int xd = (randomValues.Next(5, 20));
-        public int GoblinHP = ;
-        public int GoblinAP = 10;
+        public int GoblinHP, GoblinAP;
         MrBean mr = new MrBean();
         //string[] lines = File.ReadAllLines(path + "\\" + konto.Name + ".txt");
                     //if (konto.Pin == lines[0])
         public void GoblinAttack()
         {
             Console.WriteLine("The goblin"+Attack());
+            System.Threading.Thread.Sleep(1000);
+        }
+        public void GoblinHPP()
+        {
+            GoblinHP = randomValues.Next(5, 20);
         }
         public void TakeDamageGoblin()
         {
             Console.WriteLine("Goblin "+TakeDamage1()+mr.mrBeanAP+TakeDamage2());
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }
