@@ -73,7 +73,7 @@ namespace Chernobyl2077
                     Jake.JakePHP = Jake.JakePHP - MrBean.mrBeanAP;
                     if (Jake.JakePHP == 0)
                     {
-                        Console.WriteLine("The Squid died!");//battle end
+                        Console.WriteLine("Jake died!");//battle end
                     }
                     else
                     {
@@ -104,7 +104,7 @@ namespace Chernobyl2077
                 System.Threading.Thread.Sleep(1000);
                 Console.WriteLine("Mr Bean dodges!");
                 System.Threading.Thread.Sleep(1000);
-                Console.WriteLine("The Squid's attack misses!");
+                Console.WriteLine("Jake's attack misses!");
                 goto Start_Combat;
             }
             else
