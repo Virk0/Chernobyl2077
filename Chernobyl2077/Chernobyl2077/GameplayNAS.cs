@@ -52,6 +52,30 @@ namespace Chernobyl2077
                 Goblin Goblin = new Goblin();
                 MrBean MrBean = new MrBean();
                 Combat_start:
+                if (MrBean.mrBeanHP == 0)
+                {
+                    using (StreamReader DeathScreen2 = new StreamReader(path + @"\DeathScreen.txt"))
+                    {
+                        string DS2 = DeathScreen2.ReadToEnd();
+                        Console.WriteLine(DS2);
+                        Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
+                        string choiseCo1Dead = Console.ReadLine();
+                        if (choiseCo1Dead == "1")
+                        {
+                            Console.WriteLine("Returning to Combat checkpoint");
+                            Console.ReadKey();
+                            goto Combat1;
+                        }
+                        if (choiseCo1Dead == "2")
+                        {
+                            Console.WriteLine("Okay");
+                            Console.ReadKey();
+                            Environment.Exit(0);
+                        }
+                    }
+                }
+                else
+                {
                 Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
                 string choice1 = (Console.ReadLine());
                 if (choice1 == "1")
@@ -106,10 +130,7 @@ namespace Chernobyl2077
                 Console.ReadLine();
             }
             Console.ReadKey();
-            string Outcome = "Player won";
-                if (Outcome == "Player won")
-            {
-                {
+                }
                     Console.WriteLine("You proceed to a temporary station located near you");
                     Console.ReadKey();
                     Console.WriteLine("You see a man in the corner");
@@ -446,6 +467,7 @@ namespace Chernobyl2077
                                 else
                                 {
                                     Console.WriteLine("* The water was luckly radiation free");
+                                    
                                     Console.ReadKey();
                                 }
                             }
@@ -560,6 +582,11 @@ namespace Chernobyl2077
                             Console.ReadKey();
                             Console.WriteLine("*Now we know what was that note about");
                             Console.ReadKey();
+                            Console.WriteLine("???: Why are you here?");
+                            Console.ReadKey();
+                            Console.WriteLine("Mr.B: Who are you?");
+                            Console.ReadKey();
+                            Console.WriteLine("???: I ASKED WHY ARE YOU HERE");
 
 
 
@@ -1008,5 +1035,3 @@ namespace Chernobyl2077
             }
             
         }
-    }
-}
