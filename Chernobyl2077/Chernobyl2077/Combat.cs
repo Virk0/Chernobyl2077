@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    class Combat
+    public class Combat
     {
-        static void gayd(string[] args)
+        public static void gayd()
         {
 
             Entity aaa = new Entity();
@@ -67,7 +67,7 @@ namespace Chernobyl2077
             }
             End_Combat:
             Console.WriteLine("you win");
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
