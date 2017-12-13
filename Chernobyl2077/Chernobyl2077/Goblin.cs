@@ -15,7 +15,6 @@ namespace Chernobyl2077
         //    else
         //        Console.WriteLine("You live");
 
-
         Random randomValues = new Random();
         public int GoblinHP, GoblinAP;
         MrBean mr = new MrBean();
@@ -35,5 +34,6 @@ namespace Chernobyl2077
             Console.WriteLine("Goblin " + TakeDamage1() + mr.mrBeanAP + TakeDamage2());
             System.Threading.Thread.Sleep(1000);
         }
+
     }
 }

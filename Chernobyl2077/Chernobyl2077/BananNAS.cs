@@ -196,10 +196,10 @@ namespace Chernobyl2077
                 Console.WriteLine("Suddenly bean hears multiple goblins behind him");
                 Console.WriteLine("Bean gets knocked out");
                 Console.ReadKey();
-                Console.WriteLine("");
+                Console.WriteLine("...");
                 Console.ReadKey();
-                Console.WriteLine("");
-                Console.WriteLine("");
+                Console.WriteLine("...");
+                Console.WriteLine("...");
                 Console.ReadKey();
                 Console.Clear();
                 Console.WriteLine("*Bean wakes up");
@@ -221,6 +221,19 @@ namespace Chernobyl2077
                 Console.WriteLine("Mr.B: Who are you?");
                 Console.ReadKey();
                 Console.WriteLine("???: I ASKED WHY ARE YOU HERE");
+                Console.ReadKey();
+                Console.WriteLine("*The goblin is blocking the door, threatening MrBean with a spear*");
+                Console.ReadKey();
+                Console.WriteLine("*MrBean enters into combat with the goblin*");
+                if (Secret_Code == "3499")
+                {
+                    Console.WriteLine("*****************Skipping Combat*****************");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    //insert magnum opus
+                }
 
 
 
