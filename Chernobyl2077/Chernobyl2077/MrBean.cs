@@ -14,6 +14,7 @@ namespace Chernobyl2077
         public void Dabberino()
         {
             Console.WriteLine("Mr Bean dabs!");
+            System.Threading.Thread.Sleep(1000);
             Console.WriteLine("The hater dies!");
         }
         public void Attackk()

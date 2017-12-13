@@ -33,17 +33,17 @@ namespace Chernobyl2077
                         if (choice4 == "1")
                         {
                             Console.WriteLine("The Squid dabs!");
-                            System.Threading.Thread.Sleep(500);
-                            Console.WriteLine("Mr Bean tried to attack, but he was too slow!");
                             System.Threading.Thread.Sleep(1000);
+                            Console.WriteLine("Mr Bean tried to attack, but he was too slow!");
+                            System.Threading.Thread.Sleep(1500);
                             Console.WriteLine("Mr Bean died!");
                         }
                         else if (choice4 == "2")
                         {
                             Console.WriteLine("Mr Bean and The Squid dabbed at the same time!");
-                            System.Threading.Thread.Sleep(500);
+                            System.Threading.Thread.Sleep(1500);
                             Console.WriteLine("They canceled eachother's dabs out, making them both ineffective!");
-                            System.Threading.Thread.Sleep(1000);
+                            System.Threading.Thread.Sleep(1500);
                             goto Start_Combat;
                         }
                         else
@@ -66,6 +66,17 @@ namespace Chernobyl2077
                         System.Threading.Thread.Sleep(500);
                         Console.WriteLine("The Squids dab was ineffective!");
                     }
+                    else
+                    {
+                        Console.WriteLine("Mr Bean stood still, confused.");
+                        System.Threading.Thread.Sleep(1000);
+                        Console.WriteLine("The Squid dabs, doing " + Squidward.SquidDabAP + " damage!");
+                        System.Threading.Thread.Sleep(1500);
+                        Console.WriteLine("Mr Bean dies!");
+                        //
+                        //Reset situation
+                        //
+                    }
                 }
                 Console.WriteLine("What will Mr Bean do?\n1.Fight\n2.Dodge");
                 string choice1 = (Console.ReadLine());
@@ -76,17 +87,21 @@ namespace Chernobyl2077
                     if (choice2 == "1")
                     {
                         MrBean.Attackk();
+                        System.Threading.Thread.Sleep(1000);
                         Squidward.TakeDamage();
-                        Squidward.SquidHP = Squidward.SquidHP - 10;
+                        System.Threading.Thread.Sleep(1000);
+                        Squidward.SquidHP = Squidward.SquidHP - MrBean.mrBeanAP;
                         if (Squidward.SquidHP == 0)
                         {
-                            Console.WriteLine("The Squid died!");
+                            Console.WriteLine("The Squid died!");//battle end
                         }
                         else
                         {
                             Squidward.SqAttack();
+                            System.Threading.Thread.Sleep(1000);
                             Console.WriteLine("Mr Bean takes 20 damage!");
-                            MrBean.mrBeanHP = MrBean.mrBeanHP - 20;
+                            System.Threading.Thread.Sleep(1000);
+                            MrBean.mrBeanHP = MrBean.mrBeanHP - Squidward.SquidAP;
                             goto Start_Combat;
                         }
                         Console.ReadKey();
@@ -106,7 +121,9 @@ namespace Chernobyl2077
                 else if (choice1 == "2")
                 {
                     Squidward.SqAttack();
+                    System.Threading.Thread.Sleep(1000);
                     Console.WriteLine("Mr Bean dodges!");
+                    System.Threading.Thread.Sleep(1000);
                     Console.WriteLine("The Squid's attack misses!");
                     goto Start_Combat;
                 }
