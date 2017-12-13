@@ -14,8 +14,7 @@ namespace Chernobyl2077
             Entity aaa = new Entity();
             Goblin Goblin = new Goblin();
             MrBean MrBean = new MrBean();
-            int xd=Parse(Goblin.GoblinHPP());
-            Console.WriteLine(Goblin.GoblinHPP());
+            Goblin.GoblinHPP();
             Combat_start:
 
             Console.WriteLine("\nGoblin: "+Goblin.GoblinHP);
@@ -31,7 +30,7 @@ namespace Chernobyl2077
                     MrBean.Attackk(); 
                     Goblin.TakeDamageGoblin();
                     Goblin.GoblinHP = Goblin.GoblinHP - MrBean.mrBeanAP;
-                    if (Goblin.GoblinHP >= 0)
+                    if (Goblin.GoblinHP <= 0)
                     {
                         Console.WriteLine("The goblin died!");
                     }
