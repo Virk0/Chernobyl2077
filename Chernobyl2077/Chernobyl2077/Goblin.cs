@@ -7,11 +7,17 @@ using System.IO;
 
 namespace Chernobyl2077
 {
-    public class Goblin : Entity  
+    public class Goblin : Entity
     {
         //string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,"");
+        //if (rand.Next(0, 100) <= 50)
+        //        Console.WriteLine("You died");
+        //    else
+        //        Console.WriteLine("You live");
+        
 
         Random randomValues = new Random();
+        if(randomValues)
         int xd = (randomValues.Next(5, 20));
         public int GoblinHP = ;
         public int GoblinAP = 10;
