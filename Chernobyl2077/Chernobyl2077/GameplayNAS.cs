@@ -127,7 +127,6 @@ namespace Chernobyl2077
                              Console.WriteLine("They aren't worth much");
                              Console.ReadKey();
                              Console.WriteLine("Mr.B: I have to keep moving, i dont want to die to radiation");
-                             Console.ReadKey();
                              BananNAS.BaNAS();
 
                         
