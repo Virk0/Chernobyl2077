@@ -13,7 +13,7 @@ namespace Chernobyl2077
             start:
             Random rand = new Random();
 
-            if (rand.Next(0, 100) <= 90)
+            if (rand.Next(0, 100) <= 50)
                 Console.WriteLine("You died");
             else
                 Console.WriteLine("You live");
