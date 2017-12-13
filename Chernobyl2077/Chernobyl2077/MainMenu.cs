@@ -22,16 +22,16 @@ namespace Chernobyl2077
                 mainArt:
                 if (watch.Elapsed.TotalMilliseconds >= 4000)
                     break;
-                using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) //Vaheta User opilaseks [opilane][User]
+                using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) 
                 {
-                    using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) //Vaheta User opilaseks [opilane]
+                    using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) 
                     {
                         string Icon = Main_Icon.ReadToEnd();
                         Console.WriteLine(Icon);
                         string MLogo = Main_Logo.ReadToEnd();
                         Console.WriteLine(MLogo);
                         System.Threading.Thread.Sleep(1900);
-                        using (StreamReader Main_LogoB = new StreamReader(path + @"\MainLogoBad.txt")) //Vaheta User opilaseks [opilane]
+                        using (StreamReader Main_LogoB = new StreamReader(path + @"\MainLogoBad.txt")) 
                         {
                             Console.Clear();
                             Console.WriteLine(Icon);
@@ -48,9 +48,9 @@ namespace Chernobyl2077
             }
             watch.Stop();
             MainMenuLoaded:
-            using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) //Vaheta User opilaseks [opilane] 
+            using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt"))  
             {
-                using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) 
                 { 
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -64,9 +64,9 @@ namespace Chernobyl2077
             Console.WriteLine("                                                                                                 Press any key to continue");
             Console.ReadKey();
             Console.Clear();
-            using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+            using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) 
             {
-                using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) 
                 {
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);

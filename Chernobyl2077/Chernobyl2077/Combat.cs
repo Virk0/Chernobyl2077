@@ -35,6 +35,7 @@ namespace Chernobyl2077
                         Goblin.GoblinAttack();
                         Console.WriteLine("Mr Bean takes 10 damage!");
                         MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                        Console.WriteLine(MrBean.mrBeanHP);
                         goto Combat_start;
                     }
                     Console.ReadKey();
