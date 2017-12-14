@@ -10,7 +10,7 @@ namespace Chernobyl2077
     {
         public int mrBeanAP = 10;
         public int MrBeanDabAP = 3499;
-        public int mrBeanHP = 100;
+        public int mrBeanHP = 1;
         public void Dabberino()
         {
             Console.WriteLine("Mr Bean dabs!");

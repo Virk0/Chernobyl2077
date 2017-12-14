@@ -28,7 +28,7 @@ namespace Chernobyl2077
         }
         public void GoblinHPP()
         {
-            GoblinHP = randomValues.Next(5, 20);
+            GoblinHP = randomValues.Next(11, 20);
         }
         public void TakeDamageGoblin()
         {
