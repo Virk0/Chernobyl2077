@@ -7,9 +7,9 @@ using System.IO;
 
 namespace Chernobyl2077
 {
-    class Program
+    class squiddd
     {
-        static void Main(string[] args)
+        static void Squidd()
         {
             JakeBoss.gaydar();
             Console.ReadLine();
