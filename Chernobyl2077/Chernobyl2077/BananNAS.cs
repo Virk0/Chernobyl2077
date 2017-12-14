@@ -151,10 +151,6 @@ namespace Chernobyl2077
                         {
                             Environment.Exit(0);
                         }
-                        else
-                        {
-                            goto WaterBottleCh;
-                        }
                     }
                     else
                     {
@@ -168,10 +164,7 @@ namespace Chernobyl2077
                     Console.WriteLine("Your choice");
                     Console.ReadKey();
                 }
-                else
-                {
-                    goto WaterBottleCh;
-                }
+
 
                 Console.WriteLine("*Bean looks around himself and sees a russian goblin");
                 Console.ReadKey();

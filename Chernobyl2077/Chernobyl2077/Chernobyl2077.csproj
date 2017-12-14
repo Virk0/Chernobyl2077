@@ -50,12 +50,14 @@
     <Compile Include="GameplayAS.cs" />
     <Compile Include="GameplayNAS.cs" />
     <Compile Include="Goblin.cs" />
+    <Compile Include="HouseByTheRoad.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="MrBean.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DabblerGoblin.cs" />
+    <Compile Include="RoadToKlamaRov.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

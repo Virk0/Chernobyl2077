@@ -46,6 +46,31 @@ namespace Chernobyl2077
             {
                 MainMenu.MaMeLoaded();
             }
+            if (OptionsCh == "3499")
+            {
+                Console.WriteLine("Which chapter?\n1.\n2.Banan\n3.DoChYes\n4.DoChNo\n5.Kalmarov");
+                string Ch = Console.ReadLine();
+                if (Ch == "1")
+                {
+                    GameplayNAS.GPNAS();
+                }
+                if (Ch == "2")
+                {
+                    BananNAS.BaNAS();
+                }
+                if (Ch == "3")
+                {
+                    DoChYes.DchY();
+                }
+                if (Ch == "4")
+                {
+                    DoChNo.DchN();
+                }
+                if (Ch == "5")
+                {
+                    Kalmarov.KalMa();
+                }
+            }
 
         }
         

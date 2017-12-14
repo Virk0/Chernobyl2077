@@ -43,21 +43,21 @@ namespace Chernobyl2077
             //insert JakePaul Boss Battle
             Console.WriteLine("*Jake paul falls down in defeat");
             Console.ReadKey();
-            Console.WriteLine("You realise that you can finaly go home");
+            Console.WriteLine("*You realise that you can finaly go home");
             Console.ReadKey();
-            Console.WriteLine("You've finally defeated dabbing");
+            Console.WriteLine("*You've finally defeated dabbing");
             Console.ReadKey();
-            Console.WriteLine("You walk outside in victory");
+            Console.WriteLine("*You walk outside in victory");
             Console.ReadKey();
-            Console.WriteLine(".................");
+            Console.WriteLine(".....\n........\n........");
             Console.ReadKey();
             Console.WriteLine("Mr.B: Oh no, how, how are they still effected by dabbing");
             Console.ReadKey();
-            Console.WriteLine("I thought i killed the chosen one");
+            Console.WriteLine("*I thought i killed the chosen one");
             Console.ReadKey();
-            Console.WriteLine("Why is dabbing still here");
+            Console.WriteLine("*Why is dabbing still here");
             Console.ReadKey();
-            Console.WriteLine("Ol Johnny: You fool, you can't defeat dabbing so");
+            Console.WriteLine("Ol Johnny: You fool, you can't defeat dabbing so easily");
             Console.ReadKey();
             Console.WriteLine("Mr.B: Johnny?");
             Console.ReadKey();
@@ -67,7 +67,7 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("Mr.B: Where could i find him");
             Console.ReadKey();
-            Console.WriteLine("Ol Johnny: .....");
+            Console.WriteLine("Ol Johnny: .\n.\n.\n.\n.");
             Console.ReadKey();
             Console.WriteLine("Ol Johnny: No one knows");
             Console.ReadKey();
