@@ -26,7 +26,9 @@ namespace Chernobyl2077
         public void Dab()
         {
             Console.WriteLine("Jake dabs!");
+            System.Threading.Thread.Sleep(1500);
             Console.WriteLine("It's super effective!");
+            System.Threading.Thread.Sleep(1500);
         }
     }
 }

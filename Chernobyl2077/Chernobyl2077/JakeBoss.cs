@@ -38,11 +38,11 @@ namespace Chernobyl2077
                     }
                     else if (choice4 == "2")
                     {
-                        Console.WriteLine("Mr Bean and Jake dabbed at the same time!");
+                        Console.WriteLine("Mr Bean tried to dab, but it was ineffective!");
                         System.Threading.Thread.Sleep(1500);
-                        Console.WriteLine("They canceled eachother's dabs out, making them both ineffective!");
+                        Jake.Dab();
+                        Console.WriteLine("Mr Bean died!");
                         System.Threading.Thread.Sleep(1500);
-                        goto Start_Combat;
                     }
                     else
                     {
@@ -89,7 +89,6 @@ namespace Chernobyl2077
                 else if (choice2 == "2")
                 {
                     MrBean.Dabberino();
-                    goto End_Combat;
                 }
                 else
                 {
@@ -113,7 +112,6 @@ namespace Chernobyl2077
                 System.Threading.Thread.Sleep(2000);
                 goto Start_Combat;
             }
-            End_Combat:
             Console.WriteLine("Mr Bean wins!");
             Console.ReadLine();
         }
