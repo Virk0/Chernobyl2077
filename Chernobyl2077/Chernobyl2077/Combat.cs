@@ -6,28 +6,29 @@ using System.Threading.Tasks;
 using System.IO;
 namespace Chernobyl2077
 {
-    class Combat
+    public class Combat
     {
-        static void Main(string[] args)
+        MrBean MrBean = new MrBean();
+
+        public void Goblin()
         {
-            
+
             Entity aaa = new Entity();
             Goblin Goblin = new Goblin();
-            MrBean MrBean = new MrBean();
             Goblin.GoblinHPP();
             Combat_start:
 
-            Console.WriteLine("\nGoblin: "+Goblin.GoblinHP);
-            Console.WriteLine("\nMrBean: "+MrBean.mrBeanHP);
+            Console.WriteLine("\nGoblin: " + Goblin.GoblinHP);
+            Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
             Console.WriteLine("\nWhat will Mr Bean do?\n1.Fight\n2.Dodge");
             string choice1 = (Console.ReadLine());
             if (choice1 == "1")
             {
                 Console.WriteLine("\n1.Attack\n2.Dab");
-                string choice2= (Console.ReadLine());
-                if (choice2=="1")
+                string choice2 = (Console.ReadLine());
+                if (choice2 == "1")
                 {
-                    MrBean.Attackk(); 
+                    MrBean.Attackk();
                     Goblin.TakeDamageGoblin();
                     Goblin.GoblinHP = Goblin.GoblinHP - MrBean.mrBeanAP;
                     if (Goblin.GoblinHP <= 0)
@@ -50,9 +51,9 @@ namespace Chernobyl2077
                     }
                     Console.ReadKey();
                 }
-                else if (choice2=="2")
+                else if (choice2 == "2")
                 {
-                   MrBean.Dabberino();
+                    MrBean.Dabberino();
                 }
                 else
                 {
@@ -61,7 +62,7 @@ namespace Chernobyl2077
                     goto Combat_start;
                 }
             }
-            else if(choice1=="2")
+            else if (choice1 == "2")
             {
                 Goblin.GoblinAttack();
                 Console.WriteLine("Mr Bean dodges!");
@@ -80,7 +81,7 @@ namespace Chernobyl2077
             Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
             Console.ReadLine();
         }
-        static void Squid(string[] args)
+        public void Squid(string[] args)
         {
             using (StreamReader Squid_image = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Squiddab.txt"))
             {

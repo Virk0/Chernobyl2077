@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Entity.cs" />
     <Compile Include="Goblin.cs" />
+    <Compile Include="meh.cs" />
     <Compile Include="MrBean.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
