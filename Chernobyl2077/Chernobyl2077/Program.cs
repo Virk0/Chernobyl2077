@@ -11,6 +11,8 @@ namespace Chernobyl2077
     {
         static void Main(string[] args)
         {
+            JakeBoss.gaydar();
+            Console.ReadLine();
             using (StreamReader Squid_image = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Squiddab.txt"))
             {
                 string fBoss = Squid_image.ReadToEnd();

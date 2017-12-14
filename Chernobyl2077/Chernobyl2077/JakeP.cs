@@ -23,6 +23,14 @@ namespace Chernobyl2077
         {
             Console.WriteLine("Jake takes " + mr.mrBeanAP + TakeDamage2());
         }
+        public void TakeHeavyDamage()
+        {
+            Console.WriteLine("Jake takes " + mr.mrBeanHeavyAP + TakeDamage2());
+        }
+        public void TakeShieldDamage()
+        {
+            Console.WriteLine("Jake takes " + mr.mrBeanShieldAttackAP + TakeDamage2());
+        }
         public void Dab()
         {
             Console.WriteLine("Jake dabs!");
