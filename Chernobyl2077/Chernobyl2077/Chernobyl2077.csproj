@@ -61,6 +61,7 @@
     <Compile Include="DabblerGoblin.cs" />
     <Compile Include="RoadToKlamaRov.cs" />
     <Compile Include="Squid.cs" />
+    <Compile Include="squiddd.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
