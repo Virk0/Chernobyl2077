@@ -232,7 +232,7 @@ namespace Chernobyl2077
                 }
                 else
                 {
-                    //insert magnum opus
+                    Combat.SuperGoblin();
                 }
 
 

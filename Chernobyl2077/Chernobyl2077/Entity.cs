@@ -9,6 +9,7 @@ namespace Chernobyl2077
     public class Entity : Random
     {
         public int HP, MP, AP;
+
         public string Attack()
         {
             string xd = " attacks!";

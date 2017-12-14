@@ -82,12 +82,11 @@ namespace Chernobyl2077
         public static void SuperGoblin()
         {
             Entity aaa = new Entity();
-            Goblin Goblin = new Goblin();
+            Goblin DGoblin = new Goblin();
             MrBean MrBean = new MrBean();
-            Goblin.GoblinHPP();
-            Combat_start:
 
-            Console.WriteLine("\nGoblin: " + Goblin.GoblinHP);
+            Combat_start:
+            Console.WriteLine("\nDabbler Goblin: " + DGoblin.SuperGoblinHP);
             Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
             Console.WriteLine("\nWhat will Mr Bean do?\n1.Fight\n2.Dodge");
             string choice1 = (Console.ReadLine());
@@ -98,15 +97,15 @@ namespace Chernobyl2077
                 if (choice2 == "1")
                 {
                     MrBean.Attackk();
-                    Goblin.TakeDamageGoblin();
-                    Goblin.GoblinHP = Goblin.GoblinHP - MrBean.mrBeanAP;
-                    if (Goblin.GoblinHP <= 0)
+                    DGoblin.TakeDamageDGoblin();
+                    DGoblin.SuperGoblinHP = DGoblin.SuperGoblinHP - MrBean.mrBeanAP;
+                    if (DGoblin.SuperGoblinHP <= 0)
                     {
-                        Console.WriteLine("The goblin died!");
+                        Console.WriteLine("The Dabbler goblin died!");
                     }
                     else
                     {
-                        Goblin.GoblinAttack();
+                        DGoblin.DGoblinAttack();
                         Console.WriteLine("Mr Bean takes 10 damage!");
                         MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
                         if (MrBean.mrBeanHP <= 0)
@@ -133,9 +132,9 @@ namespace Chernobyl2077
             }
             else if (choice1 == "2")
             {
-                Goblin.GoblinAttack();
+                DGoblin.DGoblinAttack();
                 Console.WriteLine("Mr Bean dodges!");
-                Console.WriteLine("Goblins attack misses!");
+                Console.WriteLine("Dabbler Goblin's attack misses!");
                 goto Combat_start;
             }
             else
