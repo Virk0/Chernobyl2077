@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace Chernobyl2077
 {
-    public class Entity : Random
+    public class Entity
     {
-        public int HP, MP, AP;
         public string Attack()
         {
             string xd = " attacks!";
             return xd;
+        }
+        public string Heavy()
+        {
+            string axd = " does a heavy attack!";
+            return axd;
         }
 
         public string TakeDamage1()
@@ -24,6 +28,11 @@ namespace Chernobyl2077
         {
             string cxd = " damage!";
             return cxd;
+        }
+        public string Attack_Shield()
+        {
+            string dxd = " attacks with and defends with a shield!";
+            return dxd;
         }
     }
 }
