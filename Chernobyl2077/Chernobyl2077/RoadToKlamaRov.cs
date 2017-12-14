@@ -93,6 +93,20 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("Squid: Then you will die");
             // Insert Squid fight
+            Console.WriteLine("Squid: this is im-mpos-ssible, H-how?!");
+            Console.WriteLine("Mr.B: You're weak and dabbing is falling out of trend");
+            Console.WriteLine("Mr.B: Goodbye Squid");
+            Console.WriteLine("Squid: S-see y-you in he-ell");
+            Console.WriteLine("*The Squid dies");
+            Console.WriteLine("You finally defeat the evil, you got rid of the dab");
+            //Diffrent Endings for now just the end
+            using (StreamReader End = new StreamReader(path + @"\The_End.txt"))
+            {
+                string Tend = End.ReadToEnd();
+                Console.WriteLine(Tend);
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
         }
     }
 }

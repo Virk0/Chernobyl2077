@@ -14,6 +14,9 @@ namespace Chernobyl2077
         static void Main(string[] args)
         {
             Console.SetWindowSize(237, 63);
+            Console.WriteLine("lol");
+            System.Threading.Thread.Sleep(100);
+            Console.Clear();
             MainMenu.MaMe();
         }
     }

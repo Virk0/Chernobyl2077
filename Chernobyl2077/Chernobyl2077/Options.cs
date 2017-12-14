@@ -21,9 +21,9 @@ namespace Chernobyl2077
             string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Art");
             Options:
             Console.Clear();
-            using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) //Vaheta User opilaseks [opilane]
+            using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt")) 
             {
-                using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) //Vaheta User opilaseks [opilane]
+                using (StreamReader Main_Icon = new StreamReader(path + @"\Icon.txt")) 
                 {
                     string Icon = Main_Icon.ReadToEnd();
                     Console.WriteLine(Icon);
@@ -31,7 +31,7 @@ namespace Chernobyl2077
                     Console.WriteLine(MLogo);
                 }
             }
-            Console.WriteLine("What do you wish to change\n1.???\n2.???\n3.Back to main menu");
+            Console.WriteLine("What do you wish to change\n1.???\n2.???\n3.Back to main menu\nSecret Code.Skip");
             Console.WriteLine("Enter you choie:");
             string OptionsCh = Console.ReadLine();
             if (OptionsCh == "1")
@@ -48,7 +48,7 @@ namespace Chernobyl2077
             }
             if (OptionsCh == "3499")
             {
-                Console.WriteLine("Which chapter?\n1.\n2.Banan\n3.DoChYes\n4.DoChNo\n5.Kalmarov");
+                Console.WriteLine("Which chapter?\n1.\n2.Banan\n3.DoChYes\n4.DoChNo\n4.1.House By The Road\n5.Kalmarov");
                 string Ch = Console.ReadLine();
                 if (Ch == "1")
                 {
@@ -68,7 +68,11 @@ namespace Chernobyl2077
                 }
                 if (Ch == "5")
                 {
-                    Kalmarov.KalMa();
+                    RoadToKlamaRov.RoToKalMa();
+                }
+                if (Ch == "4.1")
+                {
+                    HouseByTheRoad.HoByThRo();
                 }
             }
 

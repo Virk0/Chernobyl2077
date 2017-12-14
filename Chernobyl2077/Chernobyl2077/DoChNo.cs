@@ -28,7 +28,7 @@ namespace Chernobyl2077
             Console.WriteLine("You start looking for a way out");
             Console.ReadKey();
             CaChh:
-            Console.WriteLine("*Nearby you see\n1.saw\n2.nailfile\n3.shovel\n.4.???\n5.pistol");
+            Console.WriteLine("*Nearby you see\n1.saw\n2.nailfile\n3.shovel\n4.???\n5.pistol");
             string CaCh = Console.ReadLine();
             if (CaCh == "1")
             {
@@ -79,6 +79,10 @@ namespace Chernobyl2077
                     Console.ReadKey();
                     Environment.Exit(0);
                 }
+            }
+            else
+            {
+                goto CaChh;
             }
             Console.WriteLine("*You explore around");
             Console.ReadKey();
