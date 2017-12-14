@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +28,14 @@ namespace Chernobyl2077
         {
             Console.WriteLine("Goblin " + TakeDamage1() + mr.mrBeanAP + TakeDamage2());
             System.Threading.Thread.Sleep(1000);
+        }
+        public void TakeHeavyDamageGoblin()
+        {
+            Console.WriteLine("Goblin takes " + mr.mrBeanHeavyAP + TakeDamage2());
+        }
+        public void TakeShieldDamageGoblin()
+        {
+            Console.WriteLine("Goblin takes " + mr.mrBeanShieldAttackAP + TakeDamage2());
         }
         public void DGoblinAttack()
         {
