@@ -40,7 +40,7 @@ namespace Chernobyl2077
                 Console.ReadKey();
                 Console.WriteLine("???: Gde vy dumayete, chto sobirayetes'");
                 Console.ReadKey();
-                Console.WriteLine("You see a trash can top nearby and you decide to pick it up quickly");
+                Console.WriteLine("You see a trash can top and a broken bottle nearby and you decide to pick it up quickly");
             Console.ReadKey();
             Console.WriteLine("You enter in combat with the squatting man, who can only speak gibberish!");
             Combat1:
