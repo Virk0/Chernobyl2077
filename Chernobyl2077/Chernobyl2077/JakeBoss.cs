@@ -9,7 +9,7 @@ namespace Chernobyl2077
 {
     public class JakeBoss
     {
-        static void Main(string[] args)
+        static void gaydar(string[] args)
         {
             //insert into boss battle location
             //insert image from JakeP class
@@ -51,6 +51,7 @@ namespace Chernobyl2077
                         Console.WriteLine("Jake dabs, doing " + Jake.JakePDabAP + " damage!");
                         System.Threading.Thread.Sleep(1500);
                         Console.WriteLine("Mr Bean dies!");
+
                         //
                         //Reset situation
                         //

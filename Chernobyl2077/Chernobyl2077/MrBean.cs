@@ -8,9 +8,12 @@ namespace Chernobyl2077
 {
     public class MrBean : Entity
     {
-        public int mrBeanAP = 10;
-        public int MrBeanDabAP = 3499;
+        public int mrBeanAP = 30;
+        public int mrBeanHeavyAP = 50;
+        public int mrBeanShieldAttackAP = 15;
+        public int mrBeanDabAP = 3499;
         public int mrBeanHP = 100;
+
         public void Dabberino()
         {
             Console.WriteLine("Mr Bean dabs!");
@@ -24,6 +27,14 @@ namespace Chernobyl2077
         public void TakeDamagee()
         {
             Console.WriteLine("Mr Bean " + TakeDamage1());
+        }
+        public void HeavyAttack()
+        {
+            Console.WriteLine("Mr Bean" + Heavy());
+        }
+        public void AttackShield()
+        {
+            Console.WriteLine("Mr Bean"+Attack_Shield());
         }
     }
 }
