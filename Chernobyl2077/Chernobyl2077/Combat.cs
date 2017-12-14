@@ -142,7 +142,7 @@ namespace Chernobyl2077
             Goblin DGoblin = new Goblin();
             MrBean MrBean = new MrBean();
 
-            Start_Combat:
+            New_Turn:
             Console.WriteLine("\nDabbler Goblin: " + DGoblin.SuperGoblinHP);
             Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
             Console.WriteLine("\nWhat will Mr Bean do?\n1.Fight\n2.Dodge");
@@ -171,7 +171,7 @@ namespace Chernobyl2077
                         }
                         else
                         {
-                            goto Start_Combat;
+                            goto New_Turn;
                         }
                     }
                 }
@@ -198,7 +198,7 @@ namespace Chernobyl2077
                             Console.WriteLine("Mr Bean takes 12 damage!");
                             System.Threading.Thread.Sleep(1200);
                             MrBean.mrBeanHP = MrBean.mrBeanHP - DGoblin.SuperGoblinAP;
-                            goto Start_Combat;
+                            goto New_Turn;
                         }
                     }
                     else
@@ -209,7 +209,7 @@ namespace Chernobyl2077
                         Console.WriteLine("Mr Bean takes 12 damage!");
                         System.Threading.Thread.Sleep(1200);
                         MrBean.mrBeanHP = MrBean.mrBeanHP - DGoblin.SuperGoblinAP;
-                        goto Start_Combat;
+                        goto New_Turn;
                     }
                 }
                 else if (choice2 == "3")
@@ -234,14 +234,14 @@ namespace Chernobyl2077
                         Console.WriteLine("Mr Bean takes 8 damage!");
                         System.Threading.Thread.Sleep(1200);
                         MrBean.mrBeanHP = MrBean.mrBeanHP - 8;
-                        goto Start_Combat;//insert break
+                        goto New_Turn;//insert break
                     }
                 }
                 else
                 {
                     Console.WriteLine("Mr Bean cant do that!(Type 1 to Attack & 2 to Dodge)");
                     System.Threading.Thread.Sleep(1250);
-                    goto Start_Combat;
+                    goto New_Turn;
                 }
             }
             else if (choice1 == "2")
@@ -249,13 +249,13 @@ namespace Chernobyl2077
                 DGoblin.DGoblinAttack();
                 Console.WriteLine("Mr Bean dodges!");
                 Console.WriteLine("Dabbler Goblin's attack misses!");
-                goto Start_Combat;
+                goto New_Turn;
             }
             else
             {
                 Console.WriteLine("Mr Bean cant do that!(Type 1 to Attack & 2 to Dodge)");
                 System.Threading.Thread.Sleep(2000);
-                goto Start_Combat;
+                goto New_Turn;
             }
             Console.WriteLine("you win");
             Console.ReadLine();
