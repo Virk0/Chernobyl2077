@@ -7,12 +7,10 @@ using System.IO;
 
 namespace Chernobyl2077
 {
-    class squiddd
+    public class squiddd
     {
-        static void Squidd()
+        public static void Squidd()
         {
-            JakeBoss.gaydar();
-            Console.ReadLine();
             using (StreamReader Squid_image = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Squiddab.txt"))
             {
                 string fBoss = Squid_image.ReadToEnd();

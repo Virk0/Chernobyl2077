@@ -229,7 +229,7 @@ namespace Chernobyl2077
                 }
                 else
                 {
-                    //insert magnum opus
+                    Combat.SuperGoblin();
                 }
                 Console.WriteLine("The Goblin: H-he will d-defe-eat y-you");
                 Console.ReadKey();

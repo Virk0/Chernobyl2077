@@ -76,7 +76,7 @@ namespace Chernobyl2077
             Console.WriteLine("And there is a dabbing goblin");
             Console.ReadKey();
             Console.WriteLine("You enter combat with him");
-            // Insert Combat"
+            Combat.SuperGoblin();
             Console.WriteLine("You kill him and walk in the house");
             Console.ReadKey();
             Console.WriteLine("The house is very big and dark");
@@ -92,7 +92,7 @@ namespace Chernobyl2077
             Console.WriteLine("Mr.B: Im here to stop you and stop dabbing");
             Console.ReadKey();
             Console.WriteLine("Squid: Then you will die");
-            // Insert Squid fight
+            squiddd.Squidd();
             Console.WriteLine("Squid: this is im-mpos-ssible, H-how?!");
             Console.WriteLine("Mr.B: You're weak and dabbing is falling out of trend");
             Console.WriteLine("Mr.B: Goodbye Squid");

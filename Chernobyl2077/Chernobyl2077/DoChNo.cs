@@ -101,7 +101,7 @@ namespace Chernobyl2077
             Console.WriteLine("*You stay silent");
             Console.ReadKey();
             Console.WriteLine("Jake.P: Well come and fight me you coward");
-            //insert JakePaul Boss Battle
+            JakeBoss.gaydar();
             Console.WriteLine("*Jake paul falls down in defeat");
             Console.ReadKey();
             Console.WriteLine("*You realise that you can finaly go home");
