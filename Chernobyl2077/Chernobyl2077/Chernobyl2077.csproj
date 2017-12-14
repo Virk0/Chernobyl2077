@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="BananNAS.cs" />
     <Compile Include="Combat.cs" />
+    <Compile Include="DoChNo.cs" />
+    <Compile Include="DoChYes.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="GameplayAS.cs" />
     <Compile Include="GameplayNAS.cs" />

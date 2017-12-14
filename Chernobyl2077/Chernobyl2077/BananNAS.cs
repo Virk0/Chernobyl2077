@@ -89,7 +89,7 @@ namespace Chernobyl2077
                 Disturbing:
                 Console.WriteLine("****What you see in there is very disturbing****");
                 DisturbingCH:
-                Console.WriteLine("Do you wish to see what Mr.B saw?\n1.Yes\n2.No");
+                Console.WriteLine("Do you wish to see what Mr.B saw?[DISCLAIMER]\n1.Yes\n2.No");
                 string ChMagazin = Console.ReadLine();
                 if (ChMagazin == "1")
                 {
@@ -126,7 +126,7 @@ namespace Chernobyl2077
                 Console.ReadKey();
                 Console.WriteLine("Mr.B: Should i drink it?\n1.Yes\n2.No");
                 string BottleCh = Console.ReadLine();
-                if (BottleCh == "Yes")
+                if (BottleCh == "1")
                 {
                     Random rand = new Random();
 
@@ -158,28 +158,32 @@ namespace Chernobyl2077
                     }
                     else
                     {
-                        Console.WriteLine("* The water was luckly radiation free");
+                        Console.WriteLine("*The water was luckly radiation free");
 
                         Console.ReadKey();
                     }
                 }
-                if (BottleCh == "No")
+                if (BottleCh == "2")
                 {
                     Console.WriteLine("Your choice");
                     Console.ReadKey();
                 }
+                else
+                {
+                    goto WaterBottleCh;
+                }
 
-                Console.WriteLine("* Bean looks around himself and sees a russian goblin");
+                Console.WriteLine("*Bean looks around himself and sees a russian goblin");
                 Console.ReadKey();
                 Console.WriteLine("Russian Goblin:Ya sobirayus' tebya ubit'");
                 Console.ReadKey();
-                Console.WriteLine("* Bean preapers to fight");
+                Console.WriteLine("*Bean preapers to fight");
                 Console.ReadKey();
                 Console.WriteLine("Mr.B:Dont try it Goblin!");
                 Console.ReadKey();
                 Console.WriteLine("Russian Goblin:Ty nedootsenivayesh' moyu moshch'");
                 Console.ReadKey();
-                Console.WriteLine("* Goblin jumps at Bean and combat begins");
+                Console.WriteLine("*Goblin jumps at Bean and combat begins");
                 if (Secret_Code == "3499")
                 {
                     Console.WriteLine("*****************Skipping Combat*****************");
@@ -189,7 +193,7 @@ namespace Chernobyl2077
                 {
                     Combat.gayd();
                 }
-                Console.WriteLine("You knock the Goblin out. What he didn't realise is, that you had the high ground");
+                Console.WriteLine("*What he didn't realise is, that you had the high ground");
                 Console.ReadKey();
                 Console.WriteLine("Bean is getting tired, but he can't fall asleep");
                 Console.ReadKey();
@@ -233,6 +237,24 @@ namespace Chernobyl2077
                 else
                 {
                     //insert magnum opus
+                }
+                Console.WriteLine("The Goblin: H-he will d-defe-eat y-you");
+                Console.ReadKey();
+                Console.WriteLine("*The Goblin dies");
+                Console.ReadKey();
+                Console.WriteLine("*You start exploring the house");
+                Console.ReadKey();
+                Console.WriteLine("*You see an open door");
+                Console.ReadKey();
+                Console.WriteLine("Will you go in?\n1.Yes\n2.No");
+                string DoCh = Console.ReadLine();
+                if (DoCh == "1")
+                {
+                    DoChYes.DchY();
+                }
+                if (DoCh == "2")
+                {
+                    DoChNo.DchN();
                 }
 
 
