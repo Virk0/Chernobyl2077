@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace Chernobyl2077
 {
-    class RoadToKlamaRov
+    public class RoadToKlamaRov
     {
         public static void RoToKalMa()
         {

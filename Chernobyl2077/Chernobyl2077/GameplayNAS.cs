@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace Chernobyl2077
 {
-    class GameplayNAS
+    public class GameplayNAS
     {
         public readonly string Secret_Code2 ="meme";
         public static void GPNAS()
