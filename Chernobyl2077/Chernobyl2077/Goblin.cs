@@ -11,9 +11,11 @@ namespace Chernobyl2077
     {
 
         Random randomValues = new Random();
-        public int GoblinHP, GoblinAP;
+        public int GoblinHP;
+        public int GoblinAP=15;
         MrBean mr = new MrBean();
         public int SuperGoblinHP = 40;
+        public int SuperGoblinAP = 12;
 
         public void GoblinAttack()
         {
@@ -46,6 +48,14 @@ namespace Chernobyl2077
         {
             Console.WriteLine("The dabbler Goblin " + TakeDamage1() + mr.mrBeanAP + TakeDamage2());
             System.Threading.Thread.Sleep(1000);
+        }
+        public void TakeHeavyDamageDGoblin()
+        {
+            Console.WriteLine("The dabbler Goblin takes " + mr.mrBeanHeavyAP + TakeDamage2());
+        }
+        public void TakeShieldDamageDGoblin()
+        {
+            Console.WriteLine("The dabbler Goblin takes " + mr.mrBeanShieldAttackAP + TakeDamage2());
         }
     }
 }

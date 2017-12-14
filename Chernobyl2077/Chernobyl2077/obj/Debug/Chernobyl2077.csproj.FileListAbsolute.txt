@@ -14,3 +14,6 @@ C:\Users\SIIM\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\obj\Deb
 C:\Users\SIIM\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\obj\Debug\Chernobyl2077.csproj.CoreCompileInputs.cache
 C:\Users\SIIM\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\obj\Debug\Chernobyl2077.exe
 C:\Users\SIIM\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\obj\Debug\Chernobyl2077.pdb
+C:\Users\SIIM\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\bin\Debug\Chernobyl2077.exe.config
+C:\Users\SIIM\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\bin\Debug\Chernobyl2077.exe
+C:\Users\SIIM\Documents\GitHub\Chernobyl2077\Chernobyl2077\Chernobyl2077\bin\Debug\Chernobyl2077.pdb
