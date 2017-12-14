@@ -22,7 +22,7 @@ namespace Chernobyl2077
                 Console.WriteLine("The Squid: "+Squidward.SquidHP);
                 Console.WriteLine("Mr Bean: " + MrBean.mrBeanHP);
                 i = i + 1;
-                if (i % 2 == 0)//special attack
+                if (i % 2 == 0)//enemy's special attack
                 {
                     Console.WriteLine("\nThe Squid is gonna dab!");
                     System.Threading.Thread.Sleep(1500);
@@ -86,6 +86,7 @@ namespace Chernobyl2077
                         //
                     }
                 }
+                else
                 Console.WriteLine("\nWhat will Mr Bean do?\n1.Fight\n2.Dodge");
                 string choice1 = (Console.ReadLine());
                 if (choice1 == "1")
@@ -115,12 +116,22 @@ namespace Chernobyl2077
                     }
                     else if (choice2 == "2")
                     {
-                        MrBean.HeavyAttack();
-                        System.Threading.Thread.Sleep(1200);
+                        Random rand = new Random();
 
-                        Squidward.TakeHeavyDamage();
-                        System.Threading.Thread.Sleep(1200);
-                        Squidward.SquidHP = Squidward.SquidHP - MrBean.mrBeanHeavyAP;
+                        if (rand.Next(0, 100) <= 30)
+                        {
+                            MrBean.HeavyAttack();
+                            System.Threading.Thread.Sleep(1200);
+
+                            Squidward.TakeHeavyDamage();
+                            System.Threading.Thread.Sleep(1200);
+                            Squidward.SquidHP = Squidward.SquidHP - MrBean.mrBeanHeavyAP;
+                        }    
+                        else
+                        {
+                            Console.WriteLine("But it missed!");
+                            goto Start_Combat;
+                        }
                         if (Squidward.SquidHP == 0)
                         {
                             Console.WriteLine("The Squid died!");//battle end
