@@ -85,6 +85,30 @@ namespace Chernobyl2077
                     Console.Clear();
                     Ending.End();
                 }
+                if (Ch == "SG")
+                {
+                    Console.Clear();
+                    Combat.SuperGoblin();
+                    Console.WriteLine("You win lol");
+                }
+                if (Ch == "G")
+                {
+                    Console.Clear();
+                    Combat.gayd();
+                    Console.WriteLine("You win lol");
+                }
+                if (Ch == "JP")
+                {
+                    Console.Clear();
+                    JakeBoss.gaydar();
+                    Console.WriteLine("You win lol");
+                }
+                if (Ch == "S")
+                {
+                    Console.Clear();
+                    squiddd.Squidd();
+                    Console.WriteLine("You win lol");
+                }
             }
 
         }

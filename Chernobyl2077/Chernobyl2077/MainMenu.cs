@@ -21,7 +21,7 @@ namespace Chernobyl2077
             {
                 while (true)
                 {
-                    if (watch.Elapsed.TotalMilliseconds >= 4000)
+                    if (watch.Elapsed.TotalMilliseconds >= 2000)
                         break;
                     using (StreamReader Main_Logo = new StreamReader(path + @"\MainLogo.txt"))
                     {
@@ -31,7 +31,7 @@ namespace Chernobyl2077
                             Console.WriteLine(Icon);
                             string MLogo = Main_Logo.ReadToEnd();
                             Console.WriteLine(MLogo);
-                            System.Threading.Thread.Sleep(1900);
+                            System.Threading.Thread.Sleep(900);
                             using (StreamReader Main_LogoB = new StreamReader(path + @"\MainLogoBad.txt"))
                             {
                                 Console.Clear();

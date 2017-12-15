@@ -156,6 +156,7 @@ namespace Chernobyl2077
                                 Console.WriteLine("*The water was luckly radiation free");
 
                                 Console.ReadKey();
+                                break;
                             }
                         }
                         if (BottleCh == "2")
