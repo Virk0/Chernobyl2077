@@ -149,12 +149,12 @@ namespace Chernobyl2077
                         Console.WriteLine("Mr Bean dies!");
                         RetrySQ:
                         Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
-                        int answeer = int.Parse(Console.ReadLine());
-                        if (answeer == 1)
+                        string answeer = Console.ReadLine();
+                        if (answeer == "1")
                         {
                             goto Start_Combat;
                         }
-                        if (answeer == 2)
+                        if (answeer == "2")
                         {
                             Environment.Exit(0);
                         }
