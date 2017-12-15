@@ -87,7 +87,7 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("You see a big squid emerging form around the corner");
             Console.ReadKey();
-            Console.WriteLine("Squid: You big the wrong house fool");
+            Console.WriteLine("Squid: You pick the wrong house fool");
             Console.ReadKey();
             Console.WriteLine("Mr.B: Im here to stop you and stop dabbing");
             Console.ReadKey();

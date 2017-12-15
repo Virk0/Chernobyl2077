@@ -11,7 +11,8 @@ namespace Chernobyl2077
     {
         public static void Squidd()
         {
-            using (StreamReader Squid_image = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Squiddab.txt"))
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Art");
+            using (StreamReader Squid_image = new StreamReader(path + @"\Squiddab.txt"))
             {
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
