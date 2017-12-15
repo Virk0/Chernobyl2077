@@ -8,8 +8,8 @@ namespace Chernobyl2077
 {
     public class Squid : Entity
     {
-        public int SquidHP = 200;
-        public int SquidAP = 20;
+        public int SquidHP = 250;
+        public int SquidAP = 30;
         public int SquidDabAP = 3499;
         MrBean mr = new MrBean();
 

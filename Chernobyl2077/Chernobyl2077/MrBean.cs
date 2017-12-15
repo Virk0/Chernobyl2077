@@ -9,10 +9,10 @@ namespace Chernobyl2077
     public class MrBean : Entity
     {
         public int mrBeanAP = 30;
-        public int mrBeanHeavyAP = 50;
+        public int mrBeanHeavyAP = 57;
         public int mrBeanShieldAttackAP = 15;
         public int mrBeanDabAP = 3499;
-        public int mrBeanHP = 100;
+        public int mrBeanHP = 150;
 
         public void Dabberino()
         {

@@ -10,8 +10,8 @@ namespace Chernobyl2077
     class JakeP : Entity
     {
         //insert image
-        public int JakePHP = 100;
-        public int JakePAP = 15;
+        public int JakePHP = 155;
+        public int JakePAP = 25;
         public int JakePDabAP = 3499;
         MrBean mr = new MrBean();
 

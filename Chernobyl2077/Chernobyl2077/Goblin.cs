@@ -14,8 +14,8 @@ namespace Chernobyl2077
         public int GoblinHP;
         public int GoblinAP=15;
         MrBean mr = new MrBean();
-        public int SuperGoblinHP = 40;
-        public int SuperGoblinAP = 12;
+        public int SuperGoblinHP = 70;
+        public int SuperGoblinAP = 18;
 
         public void GoblinAttack()
         {
@@ -24,7 +24,7 @@ namespace Chernobyl2077
         }
         public void GoblinHPP()
         {
-            GoblinHP = randomValues.Next(5, 20);
+            GoblinHP = randomValues.Next(20, 55);
         }
         public void TakeDamageGoblin()
         {
