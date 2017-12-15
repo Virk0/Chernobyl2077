@@ -40,28 +40,30 @@ namespace Chernobyl2077
             watch.Start();
             for (int i = 1; i < 100000; i++)
             {
-                mainArt:
-                if (watch.Elapsed.TotalMilliseconds >= 2000)
-                    break;
-                using (StreamReader End = new StreamReader(path + @"\The_End.txt"))
+                while (true)
                 {
-                    string EndG = End.ReadToEnd();
-                    Console.WriteLine(EndG);
-                    System.Threading.Thread.Sleep(900);
-                    using (StreamReader EndBa = new StreamReader(path + @"\The_EndBad.txt"))
+                    if (watch.Elapsed.TotalMilliseconds >= 4000)
+                        break;
+                    using (StreamReader Main_Logo = new StreamReader(path + @"\The_End.txt"))
                     {
-                        Console.Clear();
-                        string EndB = EndBa.ReadToEnd();
-                        Console.WriteLine(EndB);
-                        System.Threading.Thread.Sleep(150);
-                        Console.Clear();
-                        goto mainArt;
+                        string MLogo = Main_Logo.ReadToEnd();
+                        Console.WriteLine(MLogo);
+                        System.Threading.Thread.Sleep(1900);
+                        using (StreamReader Main_LogoB = new StreamReader(path + @"\The_EndBad.txt"))
+                        {
+                            Console.Clear();
+                            string MLogoB = Main_LogoB.ReadToEnd();
+                            Console.WriteLine(MLogoB);
+                            System.Threading.Thread.Sleep(150);
+                            Console.Clear();
+                            break;
+                        }
                     }
-
                 }
             }
-            watch.Stop();
             Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("*But what you didn't realise is ...");
             Console.ReadKey();
             Console.WriteLine("*You've been effected by the radiation and dabs");
@@ -73,6 +75,7 @@ namespace Chernobyl2077
             Console.WriteLine("*What he didn't realise is\nHe\nBecame\nThe\nChosen \nOne");
             Console.ReadKey();
             Console.Clear();
+
 
             //Diffrent Endings for now just the end
             using (StreamReader End = new StreamReader(path + @"\The_End.txt"))

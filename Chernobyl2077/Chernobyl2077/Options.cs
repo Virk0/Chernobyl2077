@@ -52,30 +52,37 @@ namespace Chernobyl2077
                 string Ch = Console.ReadLine();
                 if (Ch == "1")
                 {
+                    Console.Clear();
                     GameplayNAS.GPNAS();
                 }
                 if (Ch == "2")
                 {
+                    Console.Clear();
                     BananNAS.BaNAS();
                 }
                 if (Ch == "3")
                 {
+                    Console.Clear();
                     DoChYes.DchY();
                 }
                 if (Ch == "4")
                 {
+                    Console.Clear();
                     DoChNo.DchN();
                 }
                 if (Ch == "5")
                 {
+                    Console.Clear();
                     RoadToKlamaRov.RoToKalMa();
                 }
                 if (Ch == "4.1")
                 {
+                    Console.Clear();
                     HouseByTheRoad.HoByThRo();
                 }
                 if (Ch == "6")
                 {
+                    Console.Clear();
                     Ending.End();
                 }
             }
