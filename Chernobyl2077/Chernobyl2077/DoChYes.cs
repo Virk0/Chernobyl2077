@@ -63,7 +63,7 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("Mr.B: Johnny?");
             Console.ReadKey();
-            Console.WriteLine("Ol Johnny: The prophecy was a lie, They thought we was the best, the strongest and, the wisest. They were wrong");
+            Console.WriteLine("Ol Johnny: The prophecy was a lie, They thought he was the best, the strongest and, the wisest. They were wrong");
             Console.ReadKey();
             Console.WriteLine("Ol Johnny: They say there is something much worse out there.... \nThey described him as a blue big monster, who is the best at dabbing");
             Console.ReadKey();
@@ -79,6 +79,7 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("*You walk out the house and go search for the 'Dom kal'marov' building");
             Console.ReadKey();
+            RoadToKlamaRov.RoToKalMa();
 
         }
     }
