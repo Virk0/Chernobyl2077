@@ -38,16 +38,21 @@ namespace Chernobyl2077
                             System.Threading.Thread.Sleep(1200);
                             Console.WriteLine("Mr Bean tried to attack, but he was too slow!");
                             System.Threading.Thread.Sleep(1500);
-                            Console.WriteLine("Mr Bean died!");
+                            Console.WriteLine("Mr Bean dies!");
+                            RetryJP:
                             Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
                             int answeer = int.Parse(Console.ReadLine());
                             if (answeer == 1)
                             {
                                 goto Start_Combat;
                             }
-                            else
+                            if (answeer == 2)
                             {
                                 Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetryJP;
                             }
                         }
                         else if (choice4 == "2")
@@ -56,16 +61,21 @@ namespace Chernobyl2077
                             System.Threading.Thread.Sleep(1200);
                             Console.WriteLine("Mr Bean tried to attack, but he was too slow!");
                             System.Threading.Thread.Sleep(1500);
-                            Console.WriteLine("Mr Bean died!");
+                            Console.WriteLine("Mr Bean dies!");
+                            RetryJP:
                             Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
                             int answeer = int.Parse(Console.ReadLine());
                             if (answeer == 1)
                             {
                                 goto Start_Combat;
                             }
-                            else
+                            if (answeer == 2)
                             {
                                 Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetryJP;
                             }
                         }
                         else if (choice4 == "3")
@@ -73,32 +83,42 @@ namespace Chernobyl2077
                             Console.WriteLine("Mr Bean tried to dab, but it was ineffective!");
                             System.Threading.Thread.Sleep(1500);
                             Jake.Dab();
-                            Console.WriteLine("Mr Bean died!");
+                            Console.WriteLine("Mr Bean dies!");
                             System.Threading.Thread.Sleep(1500);
+                            RetryJP:
                             Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
                             int answeer = int.Parse(Console.ReadLine());
                             if (answeer == 1)
                             {
                                 goto Start_Combat;
                             }
-                            else
+                            if (answeer == 2)
                             {
                                 Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetryJP;
                             }
                         }
                         else if (choice4 == "4")
                         {
                             Console.WriteLine("Mr Bean tried to defend himself, but Jake's dab went through his defense!");
                             Console.WriteLine("Mr Bean dies!");
+                            RetryJP:
                             Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
                             int answeer = int.Parse(Console.ReadLine());
-                            if (answeer==1)
+                            if (answeer == 1)
                             {
                                 goto Start_Combat;
                             }
-                            else
+                            if (answeer == 2)
                             {
                                 Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetryJP;
                             }
                         }
                         else
@@ -107,16 +127,20 @@ namespace Chernobyl2077
                             System.Threading.Thread.Sleep(1000);
                             Console.WriteLine("Jake dabs, doing " + Jake.JakePDabAP + " damage!");
                             System.Threading.Thread.Sleep(1500);
-                            Console.WriteLine("Mr Bean dies!");
+                            RetryJP:
                             Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
                             int answeer = int.Parse(Console.ReadLine());
                             if (answeer == 1)
                             {
                                 goto Start_Combat;
                             }
-                            else
+                            if (answeer == 2)
                             {
                                 Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetryJP;
                             }
                         }
 
@@ -138,15 +162,20 @@ namespace Chernobyl2077
                         Console.WriteLine("Jake dabs, doing " + Jake.JakePDabAP + " damage!");
                         System.Threading.Thread.Sleep(1500);
                         Console.WriteLine("Mr Bean dies!");
+                        RetryJP:
                         Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
                         int answeer = int.Parse(Console.ReadLine());
                         if (answeer == 1)
                         {
                             goto Start_Combat;
                         }
-                        else
+                        if (answeer == 2)
                         {
                             Environment.Exit(0);
+                        }
+                        else
+                        {
+                            goto RetryJP;
                         }
                     }
                 }
@@ -176,7 +205,29 @@ namespace Chernobyl2077
                             Console.WriteLine("Mr Bean takes 15 damage!");
                             System.Threading.Thread.Sleep(1200);
                             MrBean.mrBeanHP = MrBean.mrBeanHP - Jake.JakePAP;
-                            goto New_Turn;
+                            if (MrBean.mrBeanHP <= 0)
+                            {
+                                Console.WriteLine("Mr Bean died!");
+                                Retry:
+                                Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                                int answeer = int.Parse(Console.ReadLine());
+                                if (answeer == 1)
+                                {
+                                    goto Start_Combat;
+                                }
+                                if (answeer == 2)
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else
+                                {
+                                    goto Retry;
+                                }
+                            }
+                            else
+                            {
+                                goto New_Turn;
+                            }
                         }
                     }
                     else if (choice2 == "2")
@@ -202,7 +253,29 @@ namespace Chernobyl2077
                                 Console.WriteLine("Mr Bean takes 15 damage!");
                                 System.Threading.Thread.Sleep(1200);
                                 MrBean.mrBeanHP = MrBean.mrBeanHP - Jake.JakePAP;
-                                goto New_Turn;
+                                if (MrBean.mrBeanHP <= 0)
+                                {
+                                    Console.WriteLine("Mr Bean died!");
+                                    Retry:
+                                    Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                                    int answeer = int.Parse(Console.ReadLine());
+                                    if (answeer == 1)
+                                    {
+                                        goto Start_Combat;
+                                    }
+                                    if (answeer == 2)
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    else
+                                    {
+                                        goto Retry;
+                                    }
+                                }
+                                else
+                                {
+                                    goto New_Turn;
+                                }
                             }
                         }
                         else
@@ -213,7 +286,29 @@ namespace Chernobyl2077
                             Console.WriteLine("Mr Bean takes 15 damage!");
                             System.Threading.Thread.Sleep(1200);
                             MrBean.mrBeanHP = MrBean.mrBeanHP - Jake.JakePAP;
-                            goto New_Turn;
+                            if (MrBean.mrBeanHP <= 0)
+                            {
+                                Console.WriteLine("Mr Bean died!");
+                                Retry:
+                                Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                                int answeer = int.Parse(Console.ReadLine());
+                                if (answeer == 1)
+                                {
+                                    goto Start_Combat;
+                                }
+                                if (answeer == 2)
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else
+                                {
+                                    goto Retry;
+                                }
+                            }
+                            else
+                            {
+                                goto New_Turn;
+                            }
                         }
                     }
 
@@ -229,7 +324,7 @@ namespace Chernobyl2077
                         Jake.TakeShieldDamage();
                         System.Threading.Thread.Sleep(1200);
                         Jake.JakePHP = Jake.JakePHP - MrBean.mrBeanShieldAttackAP;
-                        if (Jake.JakePHP == 0)
+                        if (Jake.JakePHP <= 0)
                         {
                             Console.WriteLine("Jake died!");//battle end
                         }
@@ -240,7 +335,29 @@ namespace Chernobyl2077
                             Console.WriteLine("Mr Bean takes 8 damage!");
                             System.Threading.Thread.Sleep(1200);
                             MrBean.mrBeanHP = MrBean.mrBeanHP - 8;
-                            goto New_Turn;//insert break
+                            if (MrBean.mrBeanHP <= 0)
+                            {
+                                Console.WriteLine("Mr Bean died!");
+                                Retry:
+                                Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                                int answeer = int.Parse(Console.ReadLine());
+                                if (answeer == 1)
+                                {
+                                    goto Start_Combat;
+                                }
+                                if (answeer == 2)
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else
+                                {
+                                    goto Retry;
+                                }
+                            }
+                            else
+                            {
+                                goto New_Turn;
+                            }
                         }
                     }
                     else

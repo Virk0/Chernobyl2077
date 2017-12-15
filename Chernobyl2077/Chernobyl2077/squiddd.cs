@@ -13,12 +13,13 @@ namespace Chernobyl2077
         {
             using (StreamReader Squid_image = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Squiddab.txt"))
             {
+                Start_Combat:
                 string fBoss = Squid_image.ReadToEnd();
                 Console.WriteLine(fBoss);
                 Squid Squidward = new Squid();
                 MrBean MrBean = new MrBean();
                 int i = 0;
-                Start_Combat:
+                New_Turn:
 
                 i = i + 1;
                 if (i % 2 == 0)//enemy's special attack
@@ -39,7 +40,22 @@ namespace Chernobyl2077
                             System.Threading.Thread.Sleep(1200);
                             Console.WriteLine("Mr Bean tried to attack, but he was too slow!");
                             System.Threading.Thread.Sleep(1500);
-                            Console.WriteLine("Mr Bean died!");
+                            Console.WriteLine("Mr Bean dies!");
+                            RetrySQ:
+                            Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                            int answeer = int.Parse(Console.ReadLine());
+                            if (answeer == 1)
+                            {
+                                goto Start_Combat;
+                            }
+                            if (answeer == 2)
+                            {
+                                Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetrySQ;
+                            }
                         }
                         else if (choice4 == "2")
                         {
@@ -47,7 +63,22 @@ namespace Chernobyl2077
                             System.Threading.Thread.Sleep(1200);
                             Console.WriteLine("Mr Bean tried to attack, but he was too slow!");
                             System.Threading.Thread.Sleep(1500);
-                            Console.WriteLine("Mr Bean died!");
+                            Console.WriteLine("Mr Bean dies!");
+                            RetrySQ:
+                            Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                            int answeer = int.Parse(Console.ReadLine());
+                            if (answeer == 1)
+                            {
+                                goto Start_Combat;
+                            }
+                            if (answeer == 2)
+                            {
+                                Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetrySQ;
+                            }
                         }
                         else if (choice4 == "3")
                         {
@@ -61,7 +92,21 @@ namespace Chernobyl2077
                         {
                             Console.WriteLine("Mr Bean tries to defend himself, but The Squid's dab goes through his defense!");
                             Console.WriteLine("Mr Bean dies!");
-                            //reset situation
+                            RetrySQ:
+                            Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                            int answeer = int.Parse(Console.ReadLine());
+                            if (answeer == 1)
+                            {
+                                goto Start_Combat;
+                            }
+                            if (answeer == 2)
+                            {
+                                Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetrySQ;
+                            }
                         }
                         else
                         {
@@ -70,9 +115,21 @@ namespace Chernobyl2077
                             Console.WriteLine("The Squid dabs, doing " + Squidward.SquidDabAP + " damage!");
                             System.Threading.Thread.Sleep(1500);
                             Console.WriteLine("Mr Bean dies!");
-                            //
-                            //Reset situation
-                            //
+                            RetrySQ:
+                            Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                            int answeer = int.Parse(Console.ReadLine());
+                            if (answeer == 1)
+                            {
+                                goto Start_Combat;
+                            }
+                            if (answeer == 2)
+                            {
+                                Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto RetrySQ;
+                            }
                         }
                     }
                     else if (choice3 == "2")
@@ -90,9 +147,21 @@ namespace Chernobyl2077
                         Console.WriteLine("The Squid dabs, doing " + Squidward.SquidDabAP + " damage!");
                         System.Threading.Thread.Sleep(1500);
                         Console.WriteLine("Mr Bean dies!");
-                        //
-                        //Reset situation
-                        //
+                        RetrySQ:
+                        Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                        int answeer = int.Parse(Console.ReadLine());
+                        if (answeer == 1)
+                        {
+                            goto Start_Combat;
+                        }
+                        if (answeer == 2)
+                        {
+                            Environment.Exit(0);
+                        }
+                        else
+                        {
+                            goto RetrySQ;
+                        }
                     }
                 }
                 else
@@ -111,7 +180,7 @@ namespace Chernobyl2077
                         Squidward.TakeDamage();
                         System.Threading.Thread.Sleep(1200);
                         Squidward.SquidHP = Squidward.SquidHP - MrBean.mrBeanAP;
-                        if (Squidward.SquidHP == 0)
+                        if (Squidward.SquidHP <= 0)
                         {
                             Console.WriteLine("The Squid died!");//battle end
                         }
@@ -122,9 +191,32 @@ namespace Chernobyl2077
                             Console.WriteLine("Mr Bean takes 20 damage!");
                             System.Threading.Thread.Sleep(1200);
                             MrBean.mrBeanHP = MrBean.mrBeanHP - Squidward.SquidAP;
-                            goto Start_Combat;
+                            if (MrBean.mrBeanHP <= 0)
+                            {
+                                Console.WriteLine("Mr Bean died!");
+                                Retry:
+                                Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                                int answeer = int.Parse(Console.ReadLine());
+                                if (answeer == 1)
+                                {
+                                    goto Start_Combat;
+                                }
+                                if (answeer == 2)
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else
+                                {
+                                    goto Retry;
+                                }
+                            }
+                            else
+                            {
+                                goto New_Turn;
+                            }
                         }
                     }
+
                     else if (choice2 == "2")
                     {
                         Random rand = new Random();
@@ -133,28 +225,49 @@ namespace Chernobyl2077
                         if (rand.Next(0, 100) <= 70)
                         {
                             System.Threading.Thread.Sleep(1200);
-
                             Squidward.TakeHeavyDamage();
                             System.Threading.Thread.Sleep(1200);
                             Squidward.SquidHP = Squidward.SquidHP - MrBean.mrBeanHeavyAP;
+                            if (Squidward.SquidHP <= 0)
+                            {
+                                Console.WriteLine("The Squid died!");
+                            }
+                            else
+                            {
+                                Squidward.SqAttack();
+                                System.Threading.Thread.Sleep(1200);
+                                Console.WriteLine("Mr Bean takes 20 damage!");
+                                System.Threading.Thread.Sleep(1200);
+                                MrBean.mrBeanHP = MrBean.mrBeanHP - Squidward.SquidAP;
+                                if (MrBean.mrBeanHP <= 0)
+                                {
+                                    Console.WriteLine("Mr Bean died!");
+                                    Retry:
+                                    Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                                    int answeer = int.Parse(Console.ReadLine());
+                                    if (answeer == 1)
+                                    {
+                                        goto Start_Combat;
+                                    }
+                                    if (answeer == 2)
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    else
+                                    {
+                                        goto Retry;
+                                    }
+                                }
+                                else
+                                {
+                                    goto New_Turn;
+                                }
+                            }
                         }
                         else
                         {
                             Console.WriteLine("But it missed!");
-                            goto Start_Combat;
-                        }
-                        if (Squidward.SquidHP == 0)
-                        {
-                            Console.WriteLine("The Squid died!");//battle end
-                        }
-                        else
-                        {
-                            Squidward.SqAttack();
-                            System.Threading.Thread.Sleep(1200);
-                            Console.WriteLine("Mr Bean takes 20 damage!");
-                            System.Threading.Thread.Sleep(1200);
-                            MrBean.mrBeanHP = MrBean.mrBeanHP - Squidward.SquidAP;
-                            goto Start_Combat;
+                            goto New_Turn;
                         }
                     }
                     else if (choice2 == "3")
@@ -169,7 +282,7 @@ namespace Chernobyl2077
                         Squidward.TakeShieldDamage();
                         System.Threading.Thread.Sleep(1200);
                         Squidward.SquidHP = Squidward.SquidHP - MrBean.mrBeanShieldAttackAP;
-                        if (Squidward.SquidHP == 0)
+                        if (Squidward.SquidHP <= 0)
                         {
                             Console.WriteLine("The Squid died!");//battle end
                         }
@@ -180,7 +293,29 @@ namespace Chernobyl2077
                             Console.WriteLine("Mr Bean takes 10 damage!");
                             System.Threading.Thread.Sleep(1200);
                             MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
-                            goto Start_Combat;//insert break
+                            if (MrBean.mrBeanHP <= 0)
+                            {
+                                Console.WriteLine("Mr Bean died!");
+                                Retry:
+                                Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                                int answeer = int.Parse(Console.ReadLine());
+                                if (answeer == 1)
+                                {
+                                    goto Start_Combat;
+                                }
+                                if (answeer == 2)
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else
+                                {
+                                    goto Retry;
+                                }
+                            }
+                            else
+                            {
+                                goto New_Turn;
+                            }
                         }
                     }
                     else
@@ -205,9 +340,9 @@ namespace Chernobyl2077
                     System.Threading.Thread.Sleep(2000);
                     goto Start_Combat;
                 }
-                End_Combat:
-                Console.WriteLine("Mr Bean wins!");
-                Console.ReadLine();
+                    End_Combat:
+                    Console.WriteLine("Mr Bean wins!");
+                    Console.ReadLine();
             }
         }
     }

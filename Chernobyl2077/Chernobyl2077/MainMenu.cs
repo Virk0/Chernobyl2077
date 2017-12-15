@@ -44,7 +44,6 @@ namespace Chernobyl2077
                     }
 
                 }
-                Console.WriteLine("This is test no. " + i + "\n");
             }
             watch.Stop();
             MainMenuLoaded:
@@ -82,16 +81,17 @@ namespace Chernobyl2077
             string choise1 = Console.ReadLine();
             if (choise1 == "1")
             {
-                Console.WriteLine("Do you wish to turn on autoscroll?\n1.Yes\n2.No");
-                string ChAS = Console.ReadLine();
-                if (ChAS == "1")
-                {
-                    GameplayAS.GPAS();
-                }
-                if (ChAS == "2")
-                {
-                    GameplayNAS.GPNAS();
-                }
+                //Console.WriteLine("Do you wish to turn on autoscroll?\n1.Yes\n2.No");
+                //string ChAS = Console.ReadLine();
+                //if (ChAS == "1")
+                //{
+                //    GameplayAS.GPAS();
+                //}
+                //if (ChAS == "2")
+                //{
+                //    GameplayNAS.GPNAS();
+                //}
+                GameplayNAS.GPNAS();
             }
             if (choise1 == "2")
             {
@@ -131,16 +131,17 @@ namespace Chernobyl2077
             string choise1 = Console.ReadLine();
             if (choise1 == "1")
             {
-                Console.WriteLine("Do you wish to turn on autoscroll?\n1.Yes\n2.No");
-                string ChAS = Console.ReadLine();
-                if (ChAS == "1")
-                {
-                    GameplayAS.GPAS();
-                }
-                if (ChAS == "2")
-                {
-                    GameplayNAS.GPNAS();
-                }
+                //Console.WriteLine("Do you wish to turn on autoscroll?\n1.Yes\n2.No");
+                //string ChAS = Console.ReadLine();
+                //if (ChAS == "1")
+                //{
+                //    GameplayAS.GPAS();
+                //}
+                //if (ChAS == "2")
+                //{
+                //    GameplayNAS.GPNAS();
+                //}
+                GameplayNAS.GPNAS();
             }
             if (choise1 == "2")
             {
