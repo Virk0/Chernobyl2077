@@ -70,7 +70,7 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("*Bean didn't realise that using his move 'dab' infected him aswell with it");
             Console.ReadKey();
-            Console.WriteLine("*What he didn't realise is\n.He\nBecame\nThe\nChosen \nOne");
+            Console.WriteLine("*What he didn't realise is\nHe\nBecame\nThe\nChosen \nOne");
             Console.ReadKey();
             Console.Clear();
 

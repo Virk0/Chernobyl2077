@@ -80,26 +80,11 @@ namespace Chernobyl2077
                         }
                         else if (choice4 == "3")
                         {
-                            Console.WriteLine("Mr Bean tried to dab, but it was ineffective!");
+                            Console.WriteLine("Mr Bean and Jake dabbed at the same time!");
                             System.Threading.Thread.Sleep(1500);
-                            Jake.Dab();
-                            Console.WriteLine("Mr Bean dies!");
+                            Console.WriteLine("They canceled eachother's dabs out, making them both ineffective!");
                             System.Threading.Thread.Sleep(1500);
-                            RetryJP:
-                            Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
-                            int answeer = int.Parse(Console.ReadLine());
-                            if (answeer == 1)
-                            {
-                                goto Start_Combat;
-                            }
-                            if (answeer == 2)
-                            {
-                                Environment.Exit(0);
-                            }
-                            else
-                            {
-                                goto RetryJP;
-                            }
+                            goto New_Turn;
                         }
                         else if (choice4 == "4")
                         {
