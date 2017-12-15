@@ -272,8 +272,35 @@ namespace Chernobyl2077
                     }
                     else if (choice2 == "3")
                     {
-                        MrBean.Dabberino();
-                        goto End_Combat;
+                        Console.WriteLine("Mr Bean tried to dab, but it was ineffective!");
+                        Squidward.SqAttack();
+                        System.Threading.Thread.Sleep(1200);
+                        Console.WriteLine("Mr Bean takes 10 damage!");
+                        System.Threading.Thread.Sleep(1200);
+                        MrBean.mrBeanHP = MrBean.mrBeanHP - 10;
+                        if (MrBean.mrBeanHP <= 0)
+                        {
+                            Console.WriteLine("Mr Bean died!");
+                            Retry:
+                            Console.WriteLine("Do you want to retry?\n1.Yes\n2.No");
+                            int answeer = int.Parse(Console.ReadLine());
+                            if (answeer == 1)
+                            {
+                                goto Start_Combat;
+                            }
+                            if (answeer == 2)
+                            {
+                                Environment.Exit(0);
+                            }
+                            else
+                            {
+                                goto Retry;
+                            }
+                        }
+                        else
+                        {
+                            goto New_Turn;
+                        }
                     }
                     else if (choice2 == "4")
                     {
