@@ -166,6 +166,7 @@ namespace Chernobyl2077
                     else if (choice2 == "3")
                     {
                         MrBean.Dabberino();
+                        break;
                     }
                     else if (choice2 == "4")
                     {
