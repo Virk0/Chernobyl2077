@@ -408,6 +408,7 @@ namespace Chernobyl2077
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Mr Bean wins!");
                 Console.ReadLine();
+                Ending.End();
             }
         }
     }

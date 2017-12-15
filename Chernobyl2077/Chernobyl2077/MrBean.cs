@@ -8,9 +8,9 @@ namespace Chernobyl2077
 {
     public class MrBean : Entity
     {
-        public int mrBeanAP = 30;
+        public int mrBeanAP = 33;
         public int mrBeanHeavyAP = 57;
-        public int mrBeanShieldAttackAP = 15;
+        public int mrBeanShieldAttackAP = 23;
         public int mrBeanDabAP = 3499;
         public int mrBeanHP = 150;
 
