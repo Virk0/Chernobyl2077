@@ -74,7 +74,7 @@ namespace Chernobyl2077
                     Console.WriteLine(MLogo);
                 }
             }
-            Console.WriteLine("1.Start Game \n2.Options \n3.Exit Game");
+            Console.WriteLine("1.Start Game\n2.Exit Game");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
@@ -94,20 +94,21 @@ namespace Chernobyl2077
                 //}
                 GameplayNAS.GPNAS();
             }
-            if (choise1 == "2")
+            if (choise1 == "3")
             {
                 using (StreamReader Dev = new StreamReader(path + @"\Development.txt")) 
                 {
                     Options.Op(); //Tee optionid kasulikuks kuidagi
                 }
             }
-            if (choise1 == "3")
+            if (choise1 == "2")
             {
                 Environment.Exit(0);
             }
             else
             {
-                goto MainMenuLoaded;
+                Console.Clear();
+                MainMenu.MaMeLoaded();
             }
         }
         public static void MaMeLoaded()
@@ -125,7 +126,7 @@ namespace Chernobyl2077
                         Console.WriteLine(MLogo);
                     }
                 }
-                Console.WriteLine("1.Start Game \n2.Options \n3.Exit Game");
+                Console.WriteLine("1.Start Game\n2.Exit Game");
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("");
@@ -145,20 +146,19 @@ namespace Chernobyl2077
                     //}
                     GameplayNAS.GPNAS();
                 }
-                if (choise1 == "2")
+                if (choise1 == "3")
                 {
                     using (StreamReader Dev = new StreamReader(path + @"\Development.txt"))
                     {
                         Options.Op();
                     }
                 }
-                if (choise1 == "3")
+                if (choise1 == "2")
                 {
                     Environment.Exit(0);
                 }
                 else
                 {
-                    break;
                 }
             }
         }

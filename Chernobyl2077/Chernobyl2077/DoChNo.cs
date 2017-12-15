@@ -29,8 +29,12 @@ namespace Chernobyl2077
             Console.ReadKey();
             while (true)
             {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("*Nearby you see\n1.saw\n2.nailfile\n3.shovel\n4.???\n5.handgun");
                 string CaCh = Console.ReadLine();
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 if (CaCh == "1")
                 {
                     Console.WriteLine("**You pick up the saw");
@@ -67,6 +71,8 @@ namespace Chernobyl2077
                 }
                 if (CaCh == "5")
                 {
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("*Well that's another way you can undestand the words 'a way out of the cage'");
                     Console.ReadKey();
                     Console.WriteLine("**You pick up the gun");
@@ -78,6 +84,8 @@ namespace Chernobyl2077
                         string Tend = End.ReadToEnd();
                         Console.WriteLine(Tend);
                         Console.ReadKey();
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.White;
                         Environment.Exit(0);
                     }
                 }

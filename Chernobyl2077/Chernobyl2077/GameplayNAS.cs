@@ -95,8 +95,12 @@ namespace Chernobyl2077
                     Console.ReadKey();
                     while (true)
             {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("The road splits to three:\n1.Dzheff memy\n2.net avtomobiley\n3.smert'");//\n3.banan\n4.smert'");
                 Console.WriteLine("Which are you gonna go?");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 string choiseRoad = Console.ReadLine();
                 if (choiseRoad == "1")
                 {
@@ -166,10 +170,14 @@ namespace Chernobyl2077
                     Console.WriteLine("you are dying from radiation poisoning");
                     using (StreamReader DeathScreen2 = new StreamReader(path + @"\DeathScreen.txt"))
                     {
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.Red;
                         string DS2 = DeathScreen2.ReadToEnd();
                         Console.WriteLine(DS2);
                         Console.WriteLine("Do you wish to try again?\n1.Yes\n2.No");
                         string choiseBaDead = Console.ReadLine();
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.White;
                         if (choiseBaDead == "1")
                         {
                             Console.WriteLine("Returning to roads");

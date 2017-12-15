@@ -62,17 +62,28 @@ namespace Chernobyl2077
                 }
             }
             Console.Clear();
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.Red;
+            DarkBean();
             Console.WriteLine("*But what you didn't realise is ...");
             Console.ReadKey();
-            Console.WriteLine("*You've been effected by the radiation and dabs");
+            Console.Clear();
+            DarkBean();
+            Console.WriteLine("*You've become one of them");
             Console.ReadKey();
+            Console.Clear();
+            DarkBean();
             Console.WriteLine("*You're infected with the dab");
             Console.ReadKey();
-            Console.WriteLine("*Bean didn't realise that using his move 'dab' infected him aswell with it");
+            Console.Clear();
+            DarkBean();
+            Console.WriteLine("*Bean has been possesed with the spirit of the chosen one");
             Console.ReadKey();
-            Console.WriteLine("*What he didn't realise is\nHe\nBecame\nThe\nChosen \nOne");
+            Console.Clear();
+            DarkBean();
+            Console.WriteLine("*What he didn't realise is.......");
+            Console.ReadKey();
+            Console.Clear();
+            DarkBean();
+            Console.WriteLine("\n*He\n*Is\n*The\n*Chosen \n*One");
             Console.ReadKey();
             Console.Clear();
 
@@ -84,6 +95,19 @@ namespace Chernobyl2077
                 Console.WriteLine(Tend);
                 Console.ReadKey();
                 Environment.Exit(0);
+            }
+        }
+        public static void DarkBean()
+        {
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Art");
+            using (StreamReader BD = new StreamReader(path + @"\BeanDark.txt"))
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                string BeDa = BD.ReadToEnd();
+                Console.WriteLine(BeDa);
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Red;
             }
         }
     }

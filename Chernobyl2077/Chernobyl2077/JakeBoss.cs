@@ -19,6 +19,8 @@ namespace Chernobyl2077
                 int counter = 0;
                 while (true)
                 {
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     counter = counter + 1;
                     if (counter % 3 == 0)//Special move
                     {
@@ -222,7 +224,7 @@ namespace Chernobyl2077
                             Random rand = new Random();
 
                             MrBean.HeavyAttack();
-                            if (rand.Next(0, 100) <= 70)
+                            if (rand.Next(0, 100) <= 40)
                             {
                                 System.Threading.Thread.Sleep(1200);
 
@@ -404,10 +406,12 @@ namespace Chernobyl2077
                     }
                 }
             }
-                
-            
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Mr Bean wins!");
             Console.ReadLine();
+
         }
     }
 }

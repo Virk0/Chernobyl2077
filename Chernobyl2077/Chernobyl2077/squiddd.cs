@@ -13,11 +13,15 @@ namespace Chernobyl2077
         {
             using (StreamReader Squid_image = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Chernobyl2077\Art\Squiddab.txt"))
             {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 string fBoss = Squid_image.ReadToEnd();
                 Console.WriteLine(fBoss);
                 Squid Squidward = new Squid();
                 MrBean MrBean = new MrBean();
                 int i = 0;
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 while (true)
                 {
                     i = i + 1;
@@ -246,7 +250,7 @@ namespace Chernobyl2077
                                 Random rand = new Random();
 
                                 MrBean.HeavyAttack();
-                                if (rand.Next(0, 100) <= 70)
+                                if (rand.Next(0, 100) <= 25)
                                 {
                                     System.Threading.Thread.Sleep(1200);
                                     Squidward.TakeHeavyDamage();
@@ -399,6 +403,8 @@ namespace Chernobyl2077
                         }
                     }
                 }
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Mr Bean wins!");
                 Console.ReadLine();
             }

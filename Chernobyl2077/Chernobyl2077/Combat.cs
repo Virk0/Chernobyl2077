@@ -14,8 +14,11 @@ namespace Chernobyl2077
             Goblin Goblin = new Goblin();
             MrBean MrBean = new MrBean();
             Goblin.GoblinHPP();
+
             while (true)
             {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\nGoblin: " + Goblin.GoblinHP);
                 Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
                 Console.WriteLine("\nWhat will Mr Bean do?\n1.Fight\n2.Dodge");
@@ -34,6 +37,7 @@ namespace Chernobyl2077
                         if (Goblin.GoblinHP <= 0)
                         {
                             Console.WriteLine("Goblin died!");//battle end
+                            break;
                         }
                         else
                         {
@@ -75,7 +79,7 @@ namespace Chernobyl2077
                         Random rand = new Random();
 
                         MrBean.HeavyAttack();
-                        if (rand.Next(0, 100) <= 70)
+                        if (rand.Next(0, 100) <= 60)
                         {
                             System.Threading.Thread.Sleep(1200);
 
@@ -85,6 +89,7 @@ namespace Chernobyl2077
                             if (Goblin.GoblinHP <= 0)
                             {
                                 Console.WriteLine("Goblin died!");//battle end
+                                break;
                             }
                             else
                             {
@@ -172,6 +177,7 @@ namespace Chernobyl2077
                         if (Goblin.GoblinHP <= 0)
                         {
                             Console.WriteLine("Goblin died!");//battle end
+                            break;
                         }
                         else
                         {
@@ -229,6 +235,8 @@ namespace Chernobyl2077
                 }
                 
             }
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("you win");
             Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
             Console.ReadLine();
@@ -244,6 +252,8 @@ namespace Chernobyl2077
 
             while (true)
             {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\nDabbler Goblin: " + DGoblin.SuperGoblinHP);
                 Console.WriteLine("\nMrBean: " + MrBean.mrBeanHP);
                 Console.WriteLine("\nWhat will Mr Bean do?\n1.Fight\n2.Dodge");
@@ -260,6 +270,7 @@ namespace Chernobyl2077
                         if (DGoblin.SuperGoblinHP <= 0)
                         {
                             Console.WriteLine("The Dabbler goblin died!");
+                            break;
                         }
                         else
                         {
@@ -297,7 +308,7 @@ namespace Chernobyl2077
                         Random rand = new Random();
 
                         MrBean.HeavyAttack();
-                        if (rand.Next(0, 100) <= 70)
+                        if (rand.Next(0, 100) <= 50)
                         {
                             System.Threading.Thread.Sleep(1200);
 
@@ -307,6 +318,7 @@ namespace Chernobyl2077
                             if (DGoblin.SuperGoblinHP <= 0)
                             {
                                 Console.WriteLine("Goblin died!");//battle end
+                                break;
                             }
                             else
                             {
@@ -449,6 +461,8 @@ namespace Chernobyl2077
                 }
                 
             }
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("you win");
             Console.ReadLine();
 

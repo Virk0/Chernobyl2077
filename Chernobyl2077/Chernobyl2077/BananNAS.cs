@@ -24,8 +24,12 @@ namespace Chernobyl2077
             {
                 Console.WriteLine("You see a banana on the ground");
                 Console.ReadKey();
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Mr.B: Hm, should i eat it?");
                 Console.WriteLine("1.Yes\n2.No");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 string choiseBanana = Console.ReadLine();
                 if (choiseBanana == "1")
                 {
@@ -88,15 +92,23 @@ namespace Chernobyl2077
                     Console.WriteLine("****What you see in there is very disturbing****");
                     while (true)
                     {
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Do you wish to see what Mr.B saw?[DISCLAIMER]\n1.Yes\n2.No");
                         string ChMagazin = Console.ReadLine();
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.White;
                         if (ChMagazin == "1")
                         {
                             using (StreamReader HangMan = new StreamReader(path + @"\HangingMan.txt"))
                             {
                                 string HangedMan = HangMan.ReadToEnd();
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine(HangedMan);
                                 Console.ReadKey();
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.White;
                                 break;
                             }
                         }
@@ -120,13 +132,21 @@ namespace Chernobyl2077
                         Console.ReadKey();
                         using (StreamReader WaterBottle = new StreamReader(path + @"\WaterBottle.txt"))
                         {
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.ForegroundColor = ConsoleColor.Blue;
                             string WB = WaterBottle.ReadToEnd();
                             Console.WriteLine(WB);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         Console.WriteLine("*He sees a waterbottle on the ground");
                         Console.ReadKey();
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Mr.B: Should i drink it?\n1.Yes\n2.No");
                         string BottleCh = Console.ReadLine();
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.White;
                         if (BottleCh == "1")
                         {
                             Random rand = new Random();
@@ -241,8 +261,12 @@ namespace Chernobyl2077
                     Console.ReadKey();
                     Console.WriteLine("*You see an open door");
                     Console.ReadKey();
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Will you go in?\n1.Yes\n2.No");
                     string DoCh = Console.ReadLine();
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.White;
                     if (DoCh == "1")
                     {
                         DoChYes.DchY();
