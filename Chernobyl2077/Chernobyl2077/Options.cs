@@ -48,7 +48,7 @@ namespace Chernobyl2077
             }
             if (OptionsCh == "3499")
             {
-                Console.WriteLine("Which chapter?\n1.\n2.Banan\n3.DoChYes\n4.DoChNo\n4.1.House By The Road\n5.Kalmarov");
+                Console.WriteLine("Which chapter?\n1.\n2.Banan\n3.DoChYes\n4.DoChNo\n4.1.House By The Road\n5.Kalmarov\n6.Ending");
                 string Ch = Console.ReadLine();
                 if (Ch == "1")
                 {
@@ -73,6 +73,10 @@ namespace Chernobyl2077
                 if (Ch == "4.1")
                 {
                     HouseByTheRoad.HoByThRo();
+                }
+                if (Ch == "6")
+                {
+                    Ending.End();
                 }
             }
 

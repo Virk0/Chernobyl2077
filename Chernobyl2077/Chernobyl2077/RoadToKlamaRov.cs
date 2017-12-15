@@ -115,6 +115,31 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("*You feel happy and relaxed");
             Console.ReadKey();
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            for (int i = 1; i < 100000; i++)
+            {
+                mainArt:
+                if (watch.Elapsed.TotalMilliseconds >= 2000)
+                    break;
+                using (StreamReader End = new StreamReader(path + @"\The_End.txt"))
+                {
+                    string EndG = End.ReadToEnd();
+                    Console.WriteLine(EndG);
+                    System.Threading.Thread.Sleep(900);
+                    using (StreamReader EndBa = new StreamReader(path + @"\The_EndBad.txt"))
+                    {
+                        Console.Clear();
+                        string EndB = EndBa.ReadToEnd();
+                        Console.WriteLine(EndB);
+                        System.Threading.Thread.Sleep(150);
+                        Console.Clear();
+                        goto mainArt;
+                    }
+
+                }
+            }
+            watch.Stop();
             Console.Clear();
             Console.WriteLine("*But what you didn't realise is ...");
             Console.ReadKey();
