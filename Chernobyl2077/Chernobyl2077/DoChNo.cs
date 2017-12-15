@@ -27,62 +27,64 @@ namespace Chernobyl2077
             Console.ReadKey();
             Console.WriteLine("You start looking for a way out");
             Console.ReadKey();
-            CaChh:
-            Console.WriteLine("*Nearby you see\n1.saw\n2.nailfile\n3.shovel\n4.???\n5.handgun");
-            string CaCh = Console.ReadLine();
-            if (CaCh == "1")
+            while (true)
             {
-                Console.WriteLine("**You pick up the saw");
-                Console.ReadKey();
-                Console.WriteLine("*You realise it's not a metal saw");
-                Console.ReadKey();
-                Console.WriteLine("*You put it back down");
-                goto CaChh;
-            }
-            if (CaCh == "2")
-            {
-                Console.WriteLine("**You pick up the nailfile");
-                Console.ReadKey();
-                Console.WriteLine("*You start using the file on the bars of the cage");
-                Console.ReadKey();
-                Console.WriteLine("*After a long time the bar breaks and you get out of the cage");
-            }
-            if (CaCh == "3")
-            {
-                Console.WriteLine("**You pick up the shovel");
-                Console.ReadKey();
-                Console.WriteLine("*You look below and you see that there is no bottom part on this cage");
-                Console.ReadKey();
-                Console.WriteLine("*You just lift the cage and walk out");
-            }
-            if (CaCh == "4")
-            {
-                Console.WriteLine("???");
-                Console.ReadKey();
-                Console.WriteLine("You stand there in confusion");
-                Console.ReadKey();
-                Console.WriteLine("You decide to reconsider you choice");
-                goto CaChh;
-            }
-            if (CaCh == "5")
-            {
-                Console.WriteLine("*Well that's another way you can undestand the words 'a way out of the cage'");
-                Console.ReadKey();
-                Console.WriteLine("**You pick up the gun");
-                Console.ReadKey();
-                Console.WriteLine("...");
-                Console.ReadKey();
-                using (StreamReader End = new StreamReader(path + @"\The_End.txt"))
+                Console.WriteLine("*Nearby you see\n1.saw\n2.nailfile\n3.shovel\n4.???\n5.handgun");
+                string CaCh = Console.ReadLine();
+                if (CaCh == "1")
                 {
-                    string Tend = End.ReadToEnd();
-                    Console.WriteLine(Tend);
+                    Console.WriteLine("**You pick up the saw");
                     Console.ReadKey();
-                    Environment.Exit(0);
+                    Console.WriteLine("*You realise it's not a metal saw");
+                    Console.ReadKey();
+                    Console.WriteLine("*You put it back down");
                 }
-            }
-            else
-            {
-                goto CaChh;
+                if (CaCh == "2")
+                {
+                    Console.WriteLine("**You pick up the nailfile");
+                    Console.ReadKey();
+                    Console.WriteLine("*You start using the file on the bars of the cage");
+                    Console.ReadKey();
+                    Console.WriteLine("*After a long time the bar breaks and you get out of the cage");
+                    break;
+                }
+                if (CaCh == "3")
+                {
+                    Console.WriteLine("**You pick up the shovel");
+                    Console.ReadKey();
+                    Console.WriteLine("*You look below and you see that there is no bottom part on this cage");
+                    Console.ReadKey();
+                    Console.WriteLine("*You just lift the cage and walk out");
+                    break;
+                }
+                if (CaCh == "4")
+                {
+                    Console.WriteLine("???");
+                    Console.ReadKey();
+                    Console.WriteLine("You stand there in confusion");
+                    Console.ReadKey();
+                    Console.WriteLine("You decide to reconsider you choice");
+                }
+                if (CaCh == "5")
+                {
+                    Console.WriteLine("*Well that's another way you can undestand the words 'a way out of the cage'");
+                    Console.ReadKey();
+                    Console.WriteLine("**You pick up the gun");
+                    Console.ReadKey();
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+                    using (StreamReader End = new StreamReader(path + @"\The_End.txt"))
+                    {
+                        string Tend = End.ReadToEnd();
+                        Console.WriteLine(Tend);
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                    }
+                }
+                else
+                {
+
+                }
             }
             Console.WriteLine("*You explore around");
             Console.ReadKey();
